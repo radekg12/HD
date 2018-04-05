@@ -1,6 +1,3 @@
--- ****************** SqlDBM: Microsoft SQL Server ******************
--- ******************************************************************
-
 DROP TABLE [dbo].[Viewership];
 GO
 
@@ -13,15 +10,11 @@ DROP TABLE [dbo].[Channel];
 GO
 
 
-DROP TABLE [dbo].[VariableTarget];
-GO
-
-
 DROP TABLE [dbo].[Date];
 GO
 
 
-DROP TABLE [TargetGroup];
+DROP TABLE [dbo].[TargetGroup];
 GO
 
 
@@ -31,19 +24,6 @@ GO
 
 DROP TABLE [dbo].[ChannelCategory];
 GO
-
-
---************************************** [dbo].[VariableTarget]
-
-CREATE TABLE [dbo].[VariableTarget]
-(
- [VariableTargetID] INT NOT NULL ,
- [Name]             TEXT NOT NULL ,
-
- CONSTRAINT [PK_VariableTarget] PRIMARY KEY CLUSTERED ([VariableTargetID] ASC)
-);
-GO
-
 
 
 --************************************** [dbo].[Date]
@@ -58,9 +38,9 @@ GO
 
 
 
---************************************** [TargetGroup]
+--************************************** [dbo].[TargetGroup]
 
-CREATE TABLE [TargetGroup]
+CREATE TABLE [dbo].[TargetGroup]
 (
  [Code] VARCHAR(10) NOT NULL ,
  [Name] TEXT NOT NULL ,
@@ -130,6 +110,7 @@ CREATE TABLE [dbo].[Event]
  [Description]    TEXT NOT NULL ,
  [2ndDescription] TEXT NOT NULL ,
  [StartTime]      TIME NOT NULL ,
+ [EndTime]        TIME NOT NULL ,
  [Duration]       TIME NOT NULL ,
 
  CONSTRAINT [PK_Emisja] PRIMARY KEY CLUSTERED ([EventID] ASC),
@@ -150,25 +131,24 @@ GO
 
 CREATE TABLE [dbo].[Viewership]
 (
- [ViewershipID]     INT NOT NULL ,
- [EventID]          INT NOT NULL ,
- [VariableTargetID] INT NOT NULL ,
- [TotalIndividuals] VARCHAR(10) NOT NULL ,
- [Subgroup]         VARCHAR(10) NOT NULL ,
- [A16-49]           VARCHAR(10) NOT NULL ,
- [M16-49]           VARCHAR(10) NOT NULL ,
- [A4-15]            VARCHAR(10) NOT NULL ,
- [A4-9]             VARCHAR(10) NOT NULL ,
+ [ViewershipID] INT NOT NULL ,
+ [EventID]      INT NOT NULL ,
+ [Code]         VARCHAR(10) NOT NULL ,
+ [ARM]          FLOAT NOT NULL ,
+ [ARM%]         FLOAT NOT NULL ,
+ [SHR]          FLOAT NOT NULL ,
+ [RCH%]         FLOAT NOT NULL ,
+ [RCH]          FLOAT NOT NULL ,
 
  CONSTRAINT [PK_Wartosc] PRIMARY KEY CLUSTERED ([ViewershipID] ASC),
- CONSTRAINT [FK_100] FOREIGN KEY ([VariableTargetID])
-  REFERENCES [dbo].[VariableTarget]([VariableTargetID]),
  CONSTRAINT [FK_132] FOREIGN KEY ([EventID])
-  REFERENCES [dbo].[Event]([EventID])
+  REFERENCES [dbo].[Event]([EventID]),
+ CONSTRAINT [FK_136] FOREIGN KEY ([Code])
+  REFERENCES [dbo].[TargetGroup]([Code])
 );
 GO
 
 
---SKIP Index: [fkIdx_100]
-
 --SKIP Index: [fkIdx_132]
+
+--SKIP Index: [fkIdx_136]
