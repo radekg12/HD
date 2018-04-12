@@ -30,7 +30,35 @@ GO
 
 CREATE TABLE [dbo].[Date]
 (
- [DateID] VARCHAR(10) NOT NULL ,
+ [DateID]              INT NOT NULL ,
+ [Date]                DATE NOT NULL ,
+ [Day]                 TINYINT NOT NULL ,
+ [DaySuffix]           CHAR(2) NOT NULL ,
+ [Weekday]             TINYINT NOT NULL ,
+ [WeekDayName]         VARCHAR(10) NOT NULL ,
+ [IsWeekend]           BIT NOT NULL ,
+ [IsHoliday]           BIT NOT NULL ,
+ [HolidayText]         VARCHAR(64) NOT NULL ,
+ [DOWInMonth]          TINYINT NOT NULL ,
+ [DayOfYear]           SMALLINT NOT NULL ,
+ [WeekOfMonth]         TINYINT NOT NULL ,
+ [WeekOfYear]          TINYINT NOT NULL ,
+ [ISOWeekOfYear]       TINYINT NOT NULL ,
+ [Month]               TINYINT NOT NULL ,
+ [MonthName]           VARCHAR(10) NOT NULL ,
+ [Quarter]             TINYINT NOT NULL ,
+ [QuarterName]         VARCHAR(6) NOT NULL ,
+ [Year]                INT NOT NULL ,
+ [MMYYYY]              CHAR(6) NOT NULL ,
+ [MonthYear]           CHAR(7) NOT NULL ,
+ [FirstDayOfMonth]     DATE NOT NULL ,
+ [LastDayOfMonth]      DATE NOT NULL ,
+ [FirstDayOfQuarter]   DATE NOT NULL ,
+ [LastDayOfQuarter_1]  DATE NOT NULL ,
+ [FirstDayOfYear]      DATE NOT NULL ,
+ [LastDayOfYear]       DATE NOT NULL ,
+ [FirstDayOfNextMonth] DATE NOT NULL ,
+ [FirstDayOfNextYear]  DATE NOT NULL ,
 
  CONSTRAINT [PK_DATA] PRIMARY KEY CLUSTERED ([DateID] ASC)
 );
@@ -42,10 +70,11 @@ GO
 
 CREATE TABLE [dbo].[TargetGroup]
 (
- [Code] VARCHAR(10) NOT NULL ,
- [Name] TEXT NULL ,
+ [TargetGroupID] INT NOT NULL ,
+ [Name]          TEXT NULL ,
+ [Code]          VARCHAR(10) NOT NULL ,
 
- CONSTRAINT [PK_TargetGrupa] PRIMARY KEY CLUSTERED ([Code] ASC)
+ CONSTRAINT [PK_TargetGrupa] PRIMARY KEY CLUSTERED ([TargetGroupID] ASC)
 );
 GO
 
@@ -105,7 +134,7 @@ GO
 CREATE TABLE [dbo].[Event]
 (
  [EventID]        INT NOT NULL ,
- [DateID]         VARCHAR(10) NOT NULL ,
+ [DateID]         INT NOT NULL ,
  [ChanelID]       INT NOT NULL ,
  [Description]    TEXT NOT NULL ,
  [2ndDescription] TEXT NOT NULL ,
@@ -131,20 +160,20 @@ GO
 
 CREATE TABLE [dbo].[Viewership]
 (
- [ViewershipID] INT NOT NULL ,
- [EventID]      INT NOT NULL ,
- [Code]         VARCHAR(10) NOT NULL ,
- [ARM]          FLOAT NOT NULL ,
- [ARM%]         FLOAT NOT NULL ,
- [SHR]          FLOAT NOT NULL ,
- [RCH%]         FLOAT NOT NULL ,
- [RCH]          FLOAT NOT NULL ,
+ [ViewershipID]  INT NOT NULL ,
+ [EventID]       INT NOT NULL ,
+ [TargetGroupID] INT NOT NULL ,
+ [ARM]           FLOAT NOT NULL ,
+ [ARM%]          FLOAT NOT NULL ,
+ [SHR]           FLOAT NOT NULL ,
+ [RCH%]          FLOAT NOT NULL ,
+ [RCH]           FLOAT NOT NULL ,
 
  CONSTRAINT [PK_Wartosc] PRIMARY KEY CLUSTERED ([ViewershipID] ASC),
  CONSTRAINT [FK_132] FOREIGN KEY ([EventID])
   REFERENCES [dbo].[Event]([EventID]),
- CONSTRAINT [FK_136] FOREIGN KEY ([Code])
-  REFERENCES [dbo].[TargetGroup]([Code])
+ CONSTRAINT [FK_136] FOREIGN KEY ([TargetGroupID])
+  REFERENCES [dbo].[TargetGroup]([TargetGroupID])
 );
 GO
 
