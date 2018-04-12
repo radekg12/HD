@@ -30,7 +30,7 @@ GO
 
 CREATE TABLE [dbo].[Date]
 (
- [DateID] TEXT NOT NULL ,
+ [DateID] VARCHAR(10) NOT NULL ,
 
  CONSTRAINT [PK_DATA] PRIMARY KEY CLUSTERED ([DateID] ASC)
 );
@@ -43,7 +43,7 @@ GO
 CREATE TABLE [dbo].[TargetGroup]
 (
  [Code] VARCHAR(10) NOT NULL ,
- [Name] TEXT NOT NULL ,
+ [Name] TEXT NULL ,
 
  CONSTRAINT [PK_TargetGrupa] PRIMARY KEY CLUSTERED ([Code] ASC)
 );
@@ -105,7 +105,7 @@ GO
 CREATE TABLE [dbo].[Event]
 (
  [EventID]        INT NOT NULL ,
- [DateID]         TEXT NOT NULL ,
+ [DateID]         VARCHAR(10) NOT NULL ,
  [ChanelID]       INT NOT NULL ,
  [Description]    TEXT NOT NULL ,
  [2ndDescription] TEXT NOT NULL ,

@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{E70913D8-E63C-4CDF-9E1A-33F347E840B2}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F3DC89FD-AC44-4D0A-9442-91D7F1B7DD98}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -49,7 +49,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{F10CFC49-1B48-454C-8C6D-DFA1365C5A55}"
+              DTS:DTSID="{20388DF4-9A54-4A85-9EC4-EBFA33626F17}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -58,7 +58,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Channel"
-              DTS:DTSID="{45019212-F3C5-4559-AF0D-39CEC6AA93B3}"
+              DTS:DTSID="{E4D2ED20-D8FD-49C9-AFD2-8411E64F953B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -67,7 +67,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{DDC13E54-4BA9-468F-A06F-4C0BBA79233D}"
+              DTS:DTSID="{975DD1CD-FF3C-4BCE-BE53-09EE10256DC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -76,7 +76,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd Description"
-              DTS:DTSID="{E7A464D6-35F3-4721-B71A-844EECD5CB65}"
+              DTS:DTSID="{6B058B86-EFBE-4C00-B4D6-F35ADBB5C893}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -85,7 +85,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Start time"
-              DTS:DTSID="{0CA7E27C-2C2D-4452-9BE2-D2C6B30755EA}"
+              DTS:DTSID="{549B870B-14FD-4E00-B45F-A0C932773C88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -94,7 +94,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Duration"
-              DTS:DTSID="{DF60AE60-B5A2-42D6-BA9D-0E97AE01EB78}"
+              DTS:DTSID="{3637F21C-BBBE-488D-9EAB-3C351C088E07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +103,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Variable Target"
-              DTS:DTSID="{3B9F3461-5F6F-4DFE-B7FA-A981CBAABBCA}"
+              DTS:DTSID="{47CC14A1-865B-4E52-921F-B7C2CC27F4D7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -112,7 +112,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Individuals"
-              DTS:DTSID="{A215A8DC-B0B3-4588-8894-763434905CD2}"
+              DTS:DTSID="{21206F28-9A1D-4DAA-9E23-C7640F991F7E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,7 +121,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Podgrupa"
-              DTS:DTSID="{C046F133-EF68-4D71-AA18-167C8601AC30}"
+              DTS:DTSID="{E8C1FE33-ED1C-49EE-B231-F7622EB9213C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,7 +130,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="A16-49"
-              DTS:DTSID="{E89C8654-4D99-4EA0-A01B-6035308A2F45}"
+              DTS:DTSID="{CC4EA168-CC0A-40B5-9F33-38872CF61E03}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -139,7 +139,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="M16-49"
-              DTS:DTSID="{E36EB911-947F-413B-B613-11DF4200063E}"
+              DTS:DTSID="{2BC2E43B-6E50-4773-B373-9FD50F002F2A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="A4-15"
-              DTS:DTSID="{B3B9C9BE-8472-4174-B83F-87E5E3D482E1}"
+              DTS:DTSID="{628B26FC-55BA-47F4-A828-F921A2364BD7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -157,7 +157,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="A4-9"
-              DTS:DTSID="{724CD151-7096-4553-ABBA-EB578004ECF0}"
+              DTS:DTSID="{24DC690E-43AB-4E44-B09C-C7A3C32489A5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -212,7 +212,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoiUjQMZ3L0+ukNuvxO3weQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADMe8J1y6jkCyGg33wgrlH+rVxbZwahVDLB+w9sAiX8SQAAAAAOgAAAAAIAACAAAABHcnRT16DAUpLpcg/4HPGcAUu1eoymL/vLK5vDHhwNYyAAAADCKtFNiZikRZktg/z/d6Fs4hyJqQHLSx8IHFh7a326NkAAAADd08j7LfCpxXWT85aQ7jWHTLq+ba8UTtiqook/qLWFVJK6LD7Ev1r0/1+TZ/+04/htoKwPJUlzUhMqwMUvV3Kc</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoiUjQMZ3L0+ukNuvxO3weQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADj2+U21RhweoR064GpJbn9/qqQuZF2WcohwWKmi7MbYAAAAAAOgAAAAAIAACAAAABrCGr4iRQnVsbCCFPwZsmN9ntXD/1t96/djxVZbyqlTiAAAAATErGjoA/b/oHNhQWbu8+LtJtU4/hceCq+3iDZyI/yI0AAAADf/xKKouPaiDePzDVEy6nKKZx20IFIlWnoeZRGmNURoKkMD/zSGdupaT6tAZysWPsXCiCRl2kyyQ6beFknK6Wv</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -678,7 +678,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Event]</property>
+                  name="OpenRowset">[dbo].[Event]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -783,14 +783,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Duration]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Variable Target]"
-                      cachedCodepage="1250"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Variable Target"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable Target]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Variable Target]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total Individuals]"
                       cachedCodepage="1250"
                       cachedDataType="str"
@@ -838,6 +830,14 @@
                       cachedName="A4-9"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[A4-9]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[A4-9]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Variable Target]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Variable Target"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable\Target]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Variable Target]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -878,12 +878,6 @@
                       length="50"
                       name="Duration" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable Target]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="Variable Target" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Individuals]"
                       codePage="1250"
                       dataType="str"
@@ -919,6 +913,12 @@
                       dataType="str"
                       length="50"
                       name="A4-9" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable\Target]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable\Target" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1109,7 +1109,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[TargetGroups]</property>
+                  name="OpenRowset">[dbo].[TargetGroups]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1387,7 +1387,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[KategorieKanalow]</property>
+                  name="OpenRowset">[dbo].[KategorieKanalow]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1658,7 +1658,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[GrupyMedioweKanalow]</property>
+                  name="OpenRowset">[dbo].[GrupyMedioweKanalow]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1867,13 +1867,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task 1\Flat File Source"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task 1\OLE DB Destination"
           TopLeft="7.5,103.5" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task 1\Flat File Source"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
           TopLeft="81,47.5">
