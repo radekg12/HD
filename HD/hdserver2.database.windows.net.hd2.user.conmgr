@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="hdserver2.database.windows.net.hd2.user"
+  DTS:DTSID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=hdserver2.database.windows.net;User ID=user;Initial Catalog=hd2;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoiUjQMZ3L0+ukNuvxO3weQAAAAACAAAAAAAQZgAAAAEAACAAAAC64vFl+qDRg9+OMd8VggilpQc8RVTT13uwl0UrupgAiAAAAAAOgAAAAAIAACAAAACHh5pofkImbpNn8wpCe5TUtdP+kGzsmezPgoDl9u6A34AAAADoxKsZ/BE+kqGAJqSGSKOZLfmd02lWqVhl36sduxjX9u2sgEkLD31K0HSQ0l77Jniu7/4BchA3AhgNRq1LKrIGaOsWUFCwEHnnIVf06Mz+YgorXPJRGPj1M6AwFzKdNY6iJ3T7Sf/0hZXMdx+VQr/o9/61zD61wivGMOYPP5VJi0AAAACr+N7cAoagktHR+L1oYCsWFjhPqZNVtlSkm8QfTidNGQ1pyxkODc8XxoWkBMUO2Tdxeu6TvBmbZwbgktxf/vtS</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

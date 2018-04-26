@@ -11,212 +11,10 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{F3DC89FD-AC44-4D0A-9442-91D7F1B7DD98}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{ECE3B1D2-28B5-48F6-9505-F1740E1A1AEC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{3DA20AB2-ED64-4909-B57A-B6E115985CD5}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Radek\source\repos\HD\sources\HD_projekt_kategorie kanałow.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{CD10D71A-3828-4EFE-9931-C88F907609C1}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x003B__x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x0022_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Radek\source\repos\HD\sources\HD_projekt_event tydz 1 listopad 2015_sample.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Date"
-              DTS:DTSID="{20388DF4-9A54-4A85-9EC4-EBFA33626F17}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Channel"
-              DTS:DTSID="{E4D2ED20-D8FD-49C9-AFD2-8411E64F953B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Description"
-              DTS:DTSID="{975DD1CD-FF3C-4BCE-BE53-09EE10256DC7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="2nd Description"
-              DTS:DTSID="{6B058B86-EFBE-4C00-B4D6-F35ADBB5C893}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Start time"
-              DTS:DTSID="{549B870B-14FD-4E00-B45F-A0C932773C88}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Duration"
-              DTS:DTSID="{3637F21C-BBBE-488D-9EAB-3C351C088E07}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Variable Target"
-              DTS:DTSID="{47CC14A1-865B-4E52-921F-B7C2CC27F4D7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Total Individuals"
-              DTS:DTSID="{21206F28-9A1D-4DAA-9E23-C7640F991F7E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Podgrupa"
-              DTS:DTSID="{E8C1FE33-ED1C-49EE-B231-F7622EB9213C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="A16-49"
-              DTS:DTSID="{CC4EA168-CC0A-40B5-9F33-38872CF61E03}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="M16-49"
-              DTS:DTSID="{2BC2E43B-6E50-4773-B373-9FD50F002F2A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="A4-15"
-              DTS:DTSID="{628B26FC-55BA-47F4-A828-F921A2364BD7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B__x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="A4-9"
-              DTS:DTSID="{24DC690E-43AB-4E44-B09C-C7A3C32489A5}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{26700185-1025-46D4-B03A-B29AA33CBFAF}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\Radek\source\repos\HD\sources\target.groups.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Nazwa"
-              DTS:DTSID="{7E87D065-E848-4B63-A3FF-83097FA2D23B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Kod"
-              DTS:DTSID="{9394FE0B-4C4A-43C3-810B-DAB6528DA550}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{BDE7D745-8C93-47CB-B304-CBCF4942759F}"
-      DTS:ObjectName="hdserwer.database.windows.net.hd.user">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=hdserwer.database.windows.net;User ID=user;Initial Catalog=hd;Provider=SQLNCLI11.1;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAoiUjQMZ3L0+ukNuvxO3weQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADj2+U21RhweoR064GpJbn9/qqQuZF2WcohwWKmi7MbYAAAAAAOgAAAAAIAACAAAABrCGr4iRQnVsbCCFPwZsmN9ntXD/1t96/djxVZbyqlTiAAAAATErGjoA/b/oHNhQWbu8+LtJtU4/hceCq+3iDZyI/yI0AAAADf/xKKouPaiDePzDVEy6nKKZx20IFIlWnoeZRGmNURoKkMD/zSGdupaT6tAZysWPsXCiCRl2kyyQ6beFknK6Wv</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -255,8 +53,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="{CD10D71A-3828-4EFE-9931-C88F907609C1}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -721,8 +519,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
-                  connectionManagerRefId="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
+                  connectionManagerID="{E9739BFD-DAE9-41C2-8EB4-B9618F6CEF77}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -878,6 +676,12 @@
                       length="50"
                       name="Duration" />
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable\Target]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Variable\Target" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total Individuals]"
                       codePage="1250"
                       dataType="str"
@@ -913,12 +717,6 @@
                       dataType="str"
                       length="50"
                       name="A4-9" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Variable\Target]"
-                      codePage="1250"
-                      dataType="str"
-                      length="50"
-                      name="Variable\Target" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -994,8 +792,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerID="{26700185-1025-46D4-B03A-B29AA33CBFAF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Flat File Connection Manager 1]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1152,8 +950,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
-                  connectionManagerRefId="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
+                  connectionManagerID="{E9739BFD-DAE9-41C2-8EB4-B9618F6CEF77}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1292,8 +1090,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="{3DA20AB2-ED64-4909-B57A-B6E115985CD5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1430,8 +1228,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
-                  connectionManagerRefId="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
+                  connectionManagerID="{E9739BFD-DAE9-41C2-8EB4-B9618F6CEF77}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1566,8 +1364,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 3\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerID="{3DA20AB2-ED64-4909-B57A-B6E115985CD5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1701,8 +1499,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 3\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
-                  connectionManagerRefId="Package.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
+                  connectionManagerID="{E9739BFD-DAE9-41C2-8EB4-B9618F6CEF77}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[hdserwer.database.windows.net.hd.user]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
