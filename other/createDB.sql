@@ -25,8 +25,8 @@ GO
 DROP TABLE [dbo].[ChannelCategory];
 GO
 
-DROP TABLE [dbo].#dim;
-GO
+--DROP TABLE [dbo].#dim;
+--GO
 
 DROP FUNCTION [dbo].GetEasterHolidays
 GO
@@ -74,8 +74,8 @@ GO
 CREATE TABLE [dbo].[TargetGroup]
 (
   [TargetGroupID] INT IDENTITY (1, 1) NOT NULL,
-  [Name]          TEXT                NULL,
-  [Code]          VARCHAR(20)         NOT NULL,
+  [Name]          NVARCHAR(50)        NULL,
+  [Code]          NVARCHAR(50)        NOT NULL,
 
   CONSTRAINT [PK_TargetGrupa] PRIMARY KEY CLUSTERED ([TargetGroupID] ASC)
 );
@@ -87,7 +87,7 @@ GO
 CREATE TABLE [dbo].[MediaGroup]
 (
   [MediaGroupID] INT IDENTITY (1, 1) NOT NULL,
-  [Name]         TEXT                NOT NULL,
+  [Name]         NVARCHAR(50)        NOT NULL,
 
   CONSTRAINT [PK_GrMediowa] PRIMARY KEY CLUSTERED ([MediaGroupID] ASC)
 );
@@ -99,7 +99,7 @@ GO
 CREATE TABLE [dbo].[ChannelCategory]
 (
   [ChannelCategoryID] INT IDENTITY (1, 1) NOT NULL,
-  [Name]              TEXT                NOT NULL,
+  [Name]              NVARCHAR(50)        NOT NULL,
 
   CONSTRAINT [PK_KategorieKanalow] PRIMARY KEY CLUSTERED ([ChannelCategoryID] ASC)
 );
@@ -111,10 +111,10 @@ GO
 CREATE TABLE [dbo].[Channel]
 (
   [ChanelID]          INT IDENTITY (1, 1) NOT NULL,
-  [MediaGroupID]      INT                 NOT NULL,
-  [ChannelCategoryID] INT                 NOT NULL,
-  [Name]              TEXT                NOT NULL,
-  [OldName]           TEXT                NULL,
+  [MediaGroupID]      INT                 NULL,
+  [ChannelCategoryID] INT                 NULL,
+  [Name]              NVARCHAR(50)        NOT NULL,
+  [OldName]           NVARCHAR(50)        NULL,
 
   CONSTRAINT [PK_Kanały] PRIMARY KEY CLUSTERED ([ChanelID] ASC),
   CONSTRAINT [FK_120] FOREIGN KEY ([ChannelCategoryID])
@@ -134,20 +134,24 @@ GO
 
 CREATE TABLE [dbo].[Event]
 (
-  [EventID]        INT IDENTITY (1, 1) NOT NULL,
-  [DateID]         INT                 NOT NULL,
-  [ChanelID]       INT                 NOT NULL,
-  [Description]    TEXT                NOT NULL,
-  [2ndDescription] TEXT                NOT NULL,
-  [StartTime]      TIME                NOT NULL,
-  [EndTime]        TIME                NOT NULL,
-  [Duration]       TIME                NOT NULL,
+ [EventID]        INT IDENTITY (1, 1) NOT NULL ,
+ [DateID]         INT NOT NULL ,
+ [StageEventID]    INT NOT NULL ,
+ [DateTvID]       INT NOT NULL ,
+ [ChanelID]       INT NULL ,
+ [Description]    NVARCHAR(100) NOT NULL ,
+ [2ndDescription] NVARCHAR(100) NOT NULL ,
+ [StartTime]      TIME NOT NULL ,
+ [StartTimeTv]    nvarchar(20) NOT NULL ,
+ [Duration]       TIME NOT NULL ,
 
-  CONSTRAINT [PK_Emisja] PRIMARY KEY CLUSTERED ([EventID] ASC),
-  CONSTRAINT [FK_116] FOREIGN KEY ([DateID])
-  REFERENCES [dbo].[Date] ([DateID]),
-  CONSTRAINT [FK_128] FOREIGN KEY ([ChanelID])
-  REFERENCES [dbo].[Channel] ([ChanelID])
+ CONSTRAINT [PK_Emisja] PRIMARY KEY CLUSTERED ([EventID] ASC),
+ CONSTRAINT [FK_116] FOREIGN KEY ([DateID])
+  REFERENCES [dbo].[Date]([DateID]),
+ CONSTRAINT [FK_128] FOREIGN KEY ([ChanelID])
+  REFERENCES [dbo].[Channel]([ChanelID]),
+ CONSTRAINT [FK_183] FOREIGN KEY ([DateTvID])
+  REFERENCES [dbo].[Date]([DateID])
 );
 GO
 
@@ -156,25 +160,27 @@ GO
 
 --SKIP Index: [fkIdx_128]
 
+--SKIP Index: [fkIdx_183]
+
 
 --************************************** [dbo].[Viewership]
 
 CREATE TABLE [dbo].[Viewership]
 (
-  [ViewershipID]  INT IDENTITY (1, 1) NOT NULL,
-  [EventID]       INT                 NOT NULL,
-  [TargetGroupID] INT                 NOT NULL,
-  [ARM]           FLOAT               NOT NULL,
-  [ARM%]          FLOAT               NOT NULL,
-  [SHR]           FLOAT               NOT NULL,
-  [RCH%]          FLOAT               NOT NULL,
-  [RCH]           FLOAT               NOT NULL,
+ [ViewershipID]   INT IDENTITY (1, 1) NOT NULL ,
+ [EventID]       INT NOT NULL ,
+ [TargetGroupID] INT NOT NULL ,
+ [ARM]           FLOAT NOT NULL ,
+ [ARM%]          FLOAT NOT NULL ,
+ [SHR]           FLOAT NOT NULL ,
+ [RCH%]          FLOAT NOT NULL ,
+ [RCH]           FLOAT NOT NULL ,
 
-  CONSTRAINT [PK_Wartosc] PRIMARY KEY CLUSTERED ([ViewershipID] ASC),
-  CONSTRAINT [FK_132] FOREIGN KEY ([EventID])
-  REFERENCES [dbo].[Event] ([EventID]),
-  CONSTRAINT [FK_136] FOREIGN KEY ([TargetGroupID])
-  REFERENCES [dbo].[TargetGroup] ([TargetGroupID])
+ CONSTRAINT [PK_Wartosc] PRIMARY KEY CLUSTERED ([ViewershipID] ASC),
+ CONSTRAINT [FK_132] FOREIGN KEY ([EventID])
+  REFERENCES [dbo].[Event]([EventID]),
+ CONSTRAINT [FK_136] FOREIGN KEY ([TargetGroupID])
+  REFERENCES [dbo].[TargetGroup]([TargetGroupID])
 );
 GO
 
