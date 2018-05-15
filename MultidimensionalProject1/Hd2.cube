@@ -1,0 +1,1050 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="69a001ce-4495-4937-9a65-184a0ce74367" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Hd2</ID>
+  <Name>Hd2</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="3c87c15f-1d90-4ed4-9f5e-e573dcf9973b">
+      <ID>Channel</ID>
+      <Name>Channel</Name>
+      <DimensionID>Channel</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3a07e75f-7f3f-4ff7-b4d6-dccd2dcea299">
+          <AttributeID>Chanel ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb79fc3d-b5da-4b45-8258-80979f398a9d">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95223d24-9712-46f3-8519-b7324d56e8ef">
+          <AttributeID>Old Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e8121bbe-1245-4177-ace3-3e4a439db52b">
+          <AttributeID>Media Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="17c92a07-7b15-459a-bdf1-da0a40b9d494">
+          <AttributeID>Channel Category ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="26629cf5-3d01-4ea8-ad33-2bf215e761f1">
+      <ID>Media Group</ID>
+      <Name>Media Group</Name>
+      <DimensionID>Media Group</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="11201a40-1b38-4a51-8fef-170972e4b174">
+          <AttributeID>Media Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e6be5a2-e4be-41cd-98e1-0b6a7c839908">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ab297ee0-e32e-4ed6-8566-3fd69965d7ba">
+      <ID>Channel Category</ID>
+      <Name>Channel Category</Name>
+      <DimensionID>Channel Category</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0c363640-0c62-49cd-ac54-9634d2cc90ea">
+          <AttributeID>Channel Category ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="098fa776-3c0c-4d39-9782-8a9957d1bd62">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1be0d529-0b21-4331-ad0d-ea88a657c1f0">
+      <ID>Channel Category 1</ID>
+      <Name>Channel Category 1</Name>
+      <DimensionID>Channel Category 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0283f5ed-811e-4390-9adc-a96d9dd5d359">
+          <AttributeID>Channel Category ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="01e2c581-6f92-4a50-99ce-8f7dcf6d1ec5">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ae6c5859-148f-4141-a7e3-8a441cf38dfd">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b76645da-f18a-48c3-9af0-a064c446d567">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="584914b2-9a43-4a0c-9c25-6e0b7b73e88a">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7945a48d-f792-4e07-b3d8-d6c92199efc3">
+          <AttributeID>Day Suffix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef3d3b8d-9b7b-4eb8-8923-305d46fa0a17">
+          <AttributeID>Weekday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53eb9293-6eba-4ab1-bd07-54ab5ab358af">
+          <AttributeID>Week Day Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="98a99b20-8623-4f90-8274-76d4a778cbca">
+          <AttributeID>Is Weekend</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2f710f68-c1b5-4d76-9cf4-4f83aa89a2fc">
+          <AttributeID>Is Holiday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3a445e7-0dcb-451d-88b1-6112baae44cb">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6e62b29e-d6d6-40cc-a5b0-ebf9b136dc6a">
+          <AttributeID>Week Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dcb53078-64ae-4db0-a030-c751898f8ed9">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0910ec51-964f-46b5-b2fd-9a09aa678dec">
+          <AttributeID>Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81ea793c-187a-4aaf-bfa5-308ce31bc3be">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a216c090-e5e6-4a05-8100-1ac389de4a37">
+          <AttributeID>Quarter Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c30bcf45-bb65-48a3-bec7-57f0a97bac70">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a8d59d76-6529-4bc4-ae48-9359754b89ec">
+      <ID>Date 1</ID>
+      <Name>Date 1</Name>
+      <DimensionID>Date 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="02a926c2-287a-4355-89fb-9fc90a0263cc">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7bd36601-7183-4f40-a527-349c88e44c6e">
+      <ID>Event</ID>
+      <Name>Event</Name>
+      <DimensionID>Event</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dc4bd7d4-76b7-4ecb-b0cf-2678fd4e858a">
+          <AttributeID>Event ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2231b8e-c5ac-467d-b528-aa4e59245b2e">
+          <AttributeID>Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ac76969-2c16-4c94-9fab-e78dd3fd597b">
+          <AttributeID>2nd Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3554e513-eec7-446e-aa71-a664b756a970">
+          <AttributeID>Start Time Tv</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6830c41c-b4a4-4263-a4aa-1eb12585c3de">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0d5c1ca-f13b-481f-8e7d-ce982285917e">
+          <AttributeID>Chanel ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="020e0252-abdf-4925-973c-149bd336270b">
+          <AttributeID>Media Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9a199f47-f5bb-47c2-951f-c79283954b73">
+          <AttributeID>Channel Category ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="97b226e6-5268-42ab-bd72-8bd75d60c9e3">
+      <ID>Date Tv</ID>
+      <Name>Date Tv</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b52ced13-7768-4319-8233-930f21283ae8">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef692d27-0169-47e9-8484-8e1f94ec754d">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="948f11eb-94a3-4cc9-9f85-d2c2845d8145">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="80d5b450-a0ef-4b4a-b99e-61ad8991dbac">
+          <AttributeID>Day Suffix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f1f51d6-6b33-4f57-bf9a-43ec1227b7a9">
+          <AttributeID>Weekday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c0d8ecb-2732-4976-b584-f7e87d872deb">
+          <AttributeID>Week Day Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ce3a705-2ef7-4ffc-a57f-5b9444594511">
+          <AttributeID>Is Weekend</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fe5d0816-0b70-48e3-b96f-8c9bcd2708b9">
+          <AttributeID>Is Holiday</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6506213-bb38-43d2-917e-2463e2610513">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2fe7ef85-140e-4bfc-be59-fa79a1f2d5d0">
+          <AttributeID>Week Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5fdb289c-e14e-4f6e-a1fa-ddb675b6162f">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3718514-b375-467a-a053-ef375a8ca8ac">
+          <AttributeID>Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3fe30473-c57a-47e2-9222-b76782881be2">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8074c297-1a55-45bb-a4b0-d7bbf3e00a93">
+          <AttributeID>Quarter Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="90283c4d-d9b7-40af-af40-782330f6a66b">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e184e149-47f3-404e-95c5-5d280a7900da">
+      <ID>Media Group 1</ID>
+      <Name>Media Group 1</Name>
+      <DimensionID>Media Group 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b93d0e5a-997c-4a4b-b3ba-6ab4b74e5ce0">
+          <AttributeID>Media Group ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6b80c691-46ae-4aab-a868-127a81b60c26">
+      <ID>Target Group</ID>
+      <Name>Target Group</Name>
+      <DimensionID>Target Group</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="46e8baaf-ad45-4b27-ade4-89fdde3de6db">
+          <AttributeID>Target Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="290a1a59-d515-4349-a8ef-1258c17504c1">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="169b8735-b258-4f82-85ba-f962bc8cea19">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cd78a22e-7271-44b1-b652-fd896b73146a">
+      <ID>Target Group 1</ID>
+      <Name>Target Group 1</Name>
+      <DimensionID>Target Group 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="667c32a4-8d2a-4075-856f-65345a90d7c2">
+          <AttributeID>Target Group ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e1d47a32-e61d-4ea3-9672-c5ebb778467d">
+      <ID>Viewership</ID>
+      <Name>Viewership</Name>
+      <DimensionID>Viewership</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6705380e-6979-49f7-a6a7-b32b06c3b64c">
+          <AttributeID>Viewership ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5bea087-8741-44b1-98c9-28b36d9c638f">
+          <AttributeID>ARM</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1a8de71c-94f0-4f71-a684-742960e90918">
+          <AttributeID>SHR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e28e186-bfca-4d55-8d1c-cffa70fcd126">
+          <AttributeID>RCH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e2c1914-06bf-426e-a41c-769b32424986">
+          <AttributeID>Target Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d22ef01-2e8d-49bd-a8d3-26fddf5df5ce">
+          <AttributeID>Event ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6d25503c-5b00-40f6-877c-f88c7cb296c0">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd8d237b-c9b7-4326-911a-87e56fdceccb">
+          <AttributeID>Chanel ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="be0b87b7-2b9d-497d-996f-a232f8661442">
+          <AttributeID>Media Group ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3db0da1e-26ed-471e-9887-b9ec39cf7edd">
+          <AttributeID>Channel Category ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="edffbd55-3d6b-41b5-a964-01f66edbb96e">
+      <ID>Channel</ID>
+      <Name>Channel</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1f090728-9a52-4a3f-8aab-a23af0f6536c">
+          <ID>Channel Count</ID>
+          <Name>Channel Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1b3a18bb-49f4-4476-ba9c-ba6a41e3a3c8">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="dfcce298-c717-46b6-b4e6-cb467d17f9b2">
+              <TableID>dbo_Channel</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5e61d0f0-d3b5-48f6-9e5f-53e3c820a8cc">
+          <CubeDimensionID>Channel</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0625fb33-6d8f-4cd5-a95b-4b0dd7581e86">
+              <AttributeID>Chanel ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f5eaf0a5-46e4-4aeb-9461-399ff339fee8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5352ddcd-3e6c-435a-9e29-56e758959ef6">
+                    <TableID>dbo_Channel</TableID>
+                    <ColumnID>ChanelID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b60d5781-593d-4c9f-9c52-37b4ea78a9a4">
+          <CubeDimensionID>Media Group</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ec5dce88-9217-438d-b8e6-33b892e701e1">
+              <AttributeID>Media Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17c35cb6-d166-4ef9-bd27-3f9282f2bf56">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d71e579-d980-4228-b4ce-2f80e260d6d8">
+                    <TableID>dbo_Channel</TableID>
+                    <ColumnID>MediaGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4a8f96d1-cfb4-41e9-a2e7-675b471117fe">
+          <CubeDimensionID>Channel Category</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8d2d05af-7aba-4371-9961-04b465ed9ff1">
+              <AttributeID>Channel Category ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1b901254-5cc4-477d-b643-b01b8d3d10ab">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="616d4318-d97f-4e3e-a632-689efe84d8a5">
+                    <TableID>dbo_Channel</TableID>
+                    <ColumnID>ChannelCategoryID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="97ad32e0-e845-48b4-a611-0bd65d892f0f">
+          <CubeDimensionID>Channel Category 1</CubeDimensionID>
+          <MeasureGroupID>Channel Category</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="b95ead2e-9df3-4531-92a8-483d42c5b562">
+          <CubeDimensionID>Media Group 1</CubeDimensionID>
+          <MeasureGroupID>Media Group</MeasureGroupID>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="a834bc23-00f7-430b-a6bb-cbe9f5254d3b">
+      <ID>Channel Category</ID>
+      <Name>Channel Category</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="36183d0f-7b25-4581-891a-8c916781f01a">
+          <ID>Channel Category Count</ID>
+          <Name>Channel Category Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="6dc22b0e-2a97-433a-95c7-d52fd2fe25bd">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4825bfee-7683-4f0d-9705-9d0e2460ce3a">
+              <TableID>dbo_ChannelCategory</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="fbf67b19-dcc0-4049-a4b4-5617fb237320">
+          <CubeDimensionID>Channel Category</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5a5c4e1f-05da-4e7d-ab90-034ee41262be">
+              <AttributeID>Channel Category ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a8a02df0-82e0-41a7-94ca-f5c18efff31e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ea91b648-624c-4848-9f04-a4652da842ed">
+                    <TableID>dbo_ChannelCategory</TableID>
+                    <ColumnID>ChannelCategoryID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="40cd7a6d-28e9-43a1-99a1-5f7620b410bf">
+          <CubeDimensionID>Channel Category 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8207edec-c49d-4544-af24-f0da2766f5a6">
+              <AttributeID>Channel Category ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="915cf5f2-1ad8-4f09-acd9-c9720e17722b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="609f178c-7078-4a42-88b1-1bf094a78faf">
+                    <TableID>dbo_ChannelCategory</TableID>
+                    <ColumnID>ChannelCategoryID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="df761b25-5b88-42c0-a277-835148f4e312">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="0ad38d9d-7f9a-4897-9e8e-61b111d2f8f2">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <Source dwd:design-time-name="7c5ca604-fd0d-43cd-bf63-bb716bd0fb8d">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a80a7bdb-33b4-4ecb-b810-d73a07f5000f">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>Day</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="dde07b18-f535-47f3-8f2d-6f0e7f24ce1e">
+          <ID>Weekday</ID>
+          <Name>Weekday</Name>
+          <Source dwd:design-time-name="a9af9ec2-c218-4c3e-8d7d-3f478d9f4abc">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="59ae4588-1477-479d-a611-38f6da003c40">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>Weekday</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ec082d7f-7320-4c19-854c-e253cdc075df">
+          <ID>DOW In Month</ID>
+          <Name>DOW In Month</Name>
+          <Source dwd:design-time-name="2067df6f-ad3f-4e9a-b111-940c47edd99f">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b6493dd9-7634-487d-b87b-1004d83eb08b">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>DOWInMonth</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4f95b88f-4f18-40b3-9adb-6ddc9efab97b">
+          <ID>Day Of Year</ID>
+          <Name>Day Of Year</Name>
+          <Source dwd:design-time-name="c411e713-2eb0-439c-a808-d7d0525faea0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e0d759c4-31a3-4cb6-9431-ca7bfcfc8c30">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>DayOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="75fee554-1d82-4b34-8b2a-2994231db432">
+          <ID>Week Of Month</ID>
+          <Name>Week Of Month</Name>
+          <Source dwd:design-time-name="eb71ea93-b794-422f-bb91-c8a29d8a79b1">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="264296b3-1679-42bb-a42d-8efd15271bfe">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>WeekOfMonth</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="07380dc9-2608-43da-966e-f806faec898e">
+          <ID>Week Of Year</ID>
+          <Name>Week Of Year</Name>
+          <Source dwd:design-time-name="3302afaf-673d-41e8-ba5b-5c149097b6d8">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ef567568-99f9-414a-816c-2cf3f84384b0">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>WeekOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ac090669-f7a3-4be2-8226-e4da621ab227">
+          <ID>ISO Week Of Year</ID>
+          <Name>ISO Week Of Year</Name>
+          <Source dwd:design-time-name="315dbc4d-a5a1-4f74-b57f-044212aea6b8">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="28b31a52-78c9-4053-b051-87d9ad709101">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>ISOWeekOfYear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e1a4bd09-2ab5-493a-b5ff-e93c91a25d1c">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <Source dwd:design-time-name="9bbd7c63-8c5e-4005-a147-4c17828b8945">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6aa49045-eba0-471f-9acd-d494f1a3f518">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>Month</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="602b90d7-778b-43a5-a89f-c6bc050308f3">
+          <ID>Quarter</ID>
+          <Name>Quarter</Name>
+          <Source dwd:design-time-name="baf29807-a47a-42ae-9b9f-e74f764a1314">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0c8c8fb8-d1ff-47b3-9e14-141f5ac4285c">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>Quarter</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="122832e0-15b4-4cae-9311-56d925342f48">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <Source dwd:design-time-name="837225f5-0070-4e13-9794-a930400db24d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d37c8ad0-0993-4410-874b-b652f91fb973">
+              <TableID>dbo_Date</TableID>
+              <ColumnID>Year</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="25335d26-c831-4858-bb42-bfab01f5cc1c">
+          <ID>Date Count</ID>
+          <Name>Date Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="31e083ed-3dd7-4fa0-a265-1a6392d30757">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="85d45904-f8b8-4d5a-ae5f-b989cc43a630">
+              <TableID>dbo_Date</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="a5ee70dd-f5ae-494d-bd3f-956fb668dc3b">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c1f7ee21-f416-40cd-b93d-eec29fb99a54">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="939d7c08-6d3d-41a1-8cdd-bdfbaa375384">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8829bb71-a9f5-49a0-8996-911a84c96817">
+                    <TableID>dbo_Date</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="02e749b4-fdf0-40cc-ba7a-6777a7a3c1bd">
+          <CubeDimensionID>Date 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="81ee3862-6cf8-4517-82ec-bc58b3e621e4">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="23f59890-0a69-4051-a5b6-b97ce5f5d418">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="57847f19-3257-42fd-b2a1-b4cfd51c1960">
+                    <TableID>dbo_Date</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="db500e49-5c45-4352-99a8-6fdebb6fa9ff">
+          <CubeDimensionID>Date Tv</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="317d17f8-ed42-444b-ba6a-307729b962d7">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8f3484aa-517f-4fa3-91c4-717f160c2964">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="df7f009e-b450-4d0a-96b1-ef83111f97da">
+                    <TableID>dbo_Date</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="985fde16-30d6-408d-9681-12c0e68f6ae5">
+      <ID>Event</ID>
+      <Name>Event</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="91ff9d2a-82b7-4a41-b337-1229930f3a7e">
+          <ID>Stage Event ID</ID>
+          <Name>Stage Event ID</Name>
+          <Source dwd:design-time-name="a7532905-f7fa-49d6-8667-305fa37f6f83">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ed9aa185-571c-4da2-99d8-d5da4aac4ec7">
+              <TableID>dbo_Event</TableID>
+              <ColumnID>StageEventID</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0e3a0641-7122-4bd2-8942-d642aa9a73af">
+          <ID>Event Count</ID>
+          <Name>Event Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="cf2fd45e-2569-4def-970f-a74c25fb7512">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="09c643fb-784a-4b3d-8076-791b6612ccfb">
+              <TableID>dbo_Event</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d9ca6ba1-9786-40d7-9d6d-0f2a0492977e">
+          <CubeDimensionID>Event</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1cfd3162-9edf-48ba-9cd8-72265aa03423">
+              <AttributeID>Event ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e5b6a3ba-53cb-49be-9e07-7bc8769546f7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f03611ad-0339-428d-8fa3-629775cf7801">
+                    <TableID>dbo_Event</TableID>
+                    <ColumnID>EventID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1b80cc05-6847-4c54-bb89-17098deb830b">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="617c6349-c0d9-462b-b584-79bf347c401d">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2bf080df-7e18-45cc-8540-34c24ad1070c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9672f232-6d33-477f-9891-2ea578bb39f7">
+                    <TableID>dbo_Event</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="68d0e47e-279d-46aa-8873-4721b526dbaf">
+          <CubeDimensionID>Date Tv</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="acf423a9-b5b2-4761-81d2-98986c702bd4">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="70ff6a04-bf03-4f9a-8fb7-9a653669da51">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eb688250-74b6-4ff6-ad33-bca6534ccf5d">
+                    <TableID>dbo_Event</TableID>
+                    <ColumnID>DateTvID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="69b90afd-a13a-4b80-8792-379163d53720">
+          <CubeDimensionID>Channel</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9adc125b-f7c4-490f-9e49-79496b644c7a">
+              <AttributeID>Chanel ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="62190d1d-8a2e-47a3-838e-edf7244028a1">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9aea1f0b-2f44-4bb0-abc4-8367fc82c712">
+                    <TableID>dbo_Event</TableID>
+                    <ColumnID>ChanelID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="bdfa5934-98d6-45d9-922d-3607bdde0d77">
+      <ID>Media Group</ID>
+      <Name>Media Group</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c100e404-001a-4e5b-9ffe-11bbe5c020b6">
+          <ID>Media Group Count</ID>
+          <Name>Media Group Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="261c1142-a551-411e-8968-eff185a1db47">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="00106581-a70c-42d3-bb80-8bd0ce238d91">
+              <TableID>dbo_MediaGroup</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="2ad419e4-9960-4835-bcf5-1c8ac04c3220">
+          <CubeDimensionID>Media Group</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="29dc4b8f-60d6-4bf5-9d5e-252dba4dfe45">
+              <AttributeID>Media Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="573c69d0-417b-45a7-bfca-f129b6fa9e41">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1ca0aca3-0fc6-4cc1-a8c8-7cc6a4401bf8">
+                    <TableID>dbo_MediaGroup</TableID>
+                    <ColumnID>MediaGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7af9f737-a81b-4c06-a0e5-907c1c7e4b80">
+          <CubeDimensionID>Media Group 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c3bd3d26-b6e6-49cc-ac0b-71780eca6665">
+              <AttributeID>Media Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ee40d50a-446b-4cfb-b47a-192d0b26501a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6f8bb6c1-2654-481f-bc4d-a52e2b819967">
+                    <TableID>dbo_MediaGroup</TableID>
+                    <ColumnID>MediaGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="ebee4869-1345-4926-abe5-09d3254c97c9">
+      <ID>Target Group</ID>
+      <Name>Target Group</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="09f16b1f-adfe-46ff-9ae9-c9710c3721d8">
+          <ID>Target Group Count</ID>
+          <Name>Target Group Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="49c27f84-a0bc-4a66-90ce-32d9ef267d75">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="64350d06-a21b-4139-8396-e46b423fe090">
+              <TableID>dbo_TargetGroup</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="69841bb5-cc83-40ae-a3a3-4c27d37a036f">
+          <CubeDimensionID>Target Group</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e9856bd5-8488-4f5c-8797-ec6efecd53bc">
+              <AttributeID>Target Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d9ce5b3d-d2f8-4c40-96b3-466cf0ce4c70">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7ae2e1a6-479d-443c-a768-66171396c183">
+                    <TableID>dbo_TargetGroup</TableID>
+                    <ColumnID>TargetGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d7c1d0b1-0e60-4092-8bbc-2c39f99689af">
+          <CubeDimensionID>Target Group 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="38cf486d-510f-429e-8d34-255186fa30d8">
+              <AttributeID>Target Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2136fc89-4597-4f1b-90bd-dd144f9b6c3d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8034a963-e401-4da4-8ee5-5a5c4bb1f181">
+                    <TableID>dbo_TargetGroup</TableID>
+                    <ColumnID>TargetGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="1f1f5126-9fae-40a5-82d3-ba9e49a8d249">
+      <ID>Viewership</ID>
+      <Name>Viewership</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="cef87121-c223-4820-8c70-0f6d639c0d36">
+          <ID>ARM</ID>
+          <Name>ARM</Name>
+          <Source dwd:design-time-name="4728c6de-a90c-4dd5-abac-9e3f5154fb09">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="811956fc-8911-4e73-92e9-1f89b2e6e865">
+              <TableID>dbo_Viewership</TableID>
+              <ColumnID>ARM</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="21b2bafe-fa10-4e54-9eae-551000f9e35b">
+          <ID>ARM - Viewership</ID>
+          <Name>ARM - Viewership</Name>
+          <Source dwd:design-time-name="60aff261-0804-4303-829f-ef6751cc6c85">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="082d0590-c216-4e70-94dc-6fc58d8f4d5c">
+              <TableID>dbo_Viewership</TableID>
+              <ColumnID>ARM_x0025_</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="461fde32-0234-408c-b808-432e8921f77f">
+          <ID>SHR</ID>
+          <Name>SHR</Name>
+          <Source dwd:design-time-name="c7420461-d444-4d35-b3e2-7d72a3e6c82e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c22b0723-42d9-4275-96d6-8cd31c59322b">
+              <TableID>dbo_Viewership</TableID>
+              <ColumnID>SHR</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="07d7ac4a-4b04-471f-9372-139c2ff34517">
+          <ID>RCH</ID>
+          <Name>RCH</Name>
+          <Source dwd:design-time-name="2c7b48c9-e569-49ee-8de9-54c0d5df1548">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6f8dc848-f66e-48db-8b00-3f6e063dc98a">
+              <TableID>dbo_Viewership</TableID>
+              <ColumnID>RCH_x0025_</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="518387f5-8ee2-4515-bf5d-c109575112a1">
+          <ID>RCH - Viewership</ID>
+          <Name>RCH - Viewership</Name>
+          <Source dwd:design-time-name="f5e391d5-c721-40d7-bcb5-9ebc02a628df">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8c0c4385-6817-4ba1-b0f9-932076629e82">
+              <TableID>dbo_Viewership</TableID>
+              <ColumnID>RCH</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="859525f6-a26e-4a31-a031-fd18821e4be7">
+          <ID>Viewership Count</ID>
+          <Name>Viewership Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="34bdcd1f-b2c6-4d81-ad14-3c09b0d2d5f5">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="b31d5ed2-390d-469f-893a-50c6aa2e8e48">
+              <TableID>dbo_Viewership</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="2d3d0acd-9ec0-4c52-b37e-8da0d0113be3">
+          <CubeDimensionID>Viewership</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bc979725-7b20-436f-ada6-cfed41bce8ee">
+              <AttributeID>Viewership ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="be3dfe67-fd20-4a77-9c98-fdca6c39e678">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="32e02229-39e0-48f5-a013-7ecd4d47faf2">
+                    <TableID>dbo_Viewership</TableID>
+                    <ColumnID>ViewershipID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5b439097-cf00-4be3-96ee-820a5e86d0da">
+          <CubeDimensionID>Target Group</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d5917d21-9c4f-4211-a3b8-7dea4bd31373">
+              <AttributeID>Target Group ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7be82786-7b08-405a-84da-c4ac97d20df1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="63127679-cfe8-44cb-84bb-9c0b7cb840c0">
+                    <TableID>dbo_Viewership</TableID>
+                    <ColumnID>TargetGroupID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3b6800ca-a848-4e1a-b4da-80b5c4aaa0a6">
+          <CubeDimensionID>Event</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b6ff9d4f-ab0c-4458-8350-ef082c9d9153">
+              <AttributeID>Event ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="61b56f07-006a-4ee6-8ea8-b0f34d2f5c79">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f9c84fa3-4242-477a-8a2a-5e7a6f95b6d3">
+                    <TableID>dbo_Viewership</TableID>
+                    <ColumnID>EventID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="fc9067ce-db66-4952-b1a5-efb953050920">
+          <CubeDimensionID>Target Group 1</CubeDimensionID>
+          <MeasureGroupID>Target Group</MeasureGroupID>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ade2ddc1-9e5f-45d6-a14d-449927c81470">
+    <DataSourceViewID>Hd2</DataSourceViewID>
+  </Source>
+</Cube>

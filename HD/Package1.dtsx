@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="174"
-  DTS:VersionGUID="{7CB4FB20-0E29-4EBA-AA1F-5354C3886E5D}">
+  DTS:VersionBuild="182"
+  DTS:VersionGUID="{87127F05-3447-4F7C-9211-3ACCB1A01F80}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1129,8 +1129,8 @@
               <connections>
                 <connection
                   refId="Package\Chanel Task 3\hurt_ChanelCat.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1256,8 +1256,8 @@
               <connections>
                 <connection
                   refId="Package\Chanel Task 3\hurt_mediaGr.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1812,8 +1812,8 @@
               <connections>
                 <connection
                   refId="Package\Chanel Task 3\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3325,24 +3325,24 @@
               startId="Package\Chanel Task 3\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\Chanel Task 3.Paths[OLE DB Source Output3]"
-              endId="Package\Chanel Task 3\Data Conversion 1.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\Chanel Task 3\hurt_mediaGr.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
-              endId="Package\Chanel Task 3\Sort 5.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Chanel Task 3\OLE DB Source.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Chanel Task 3.Paths[OLE DB Source Output]"
               endId="Package\Chanel Task 3\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\Chanel Task 3\hurt_ChanelCat.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
+              refId="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
               endId="Package\Chanel Task 3\Conditional Split.Inputs[Conditional Split Input]"
               name="OLE DB Source Output"
               startId="Package\Chanel Task 3\stage_katKanal.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Chanel Task 3.Paths[OLE DB Source Output]"
+              endId="Package\Chanel Task 3\Sort 5.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Chanel Task 3\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
+              endId="Package\Chanel Task 3\Data Conversion 1.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Chanel Task 3\hurt_mediaGr.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Chanel Task 3.Paths[Sort Output]"
               endId="Package\Chanel Task 3\Merge Join.Inputs[Merge Join Right Input]"
@@ -3637,8 +3637,8 @@
               <connections>
                 <connection
                   refId="Package\ChannelCategory Task 2\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4319,8 +4319,8 @@ where [refTable].[StageEventID] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -4477,8 +4477,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup 1.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -4567,68 +4567,6 @@ where [refTable].[Code] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Multicast"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Multicast 1"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast 1">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Multicast 1.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast 1.Outputs[Multicast Output 2]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4687,8 +4625,8 @@ where [refTable].[Code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8643,7 +8581,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
-              endId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]"
+              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
               name="Aggregate Output 1"
               startId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]" />
             <path
@@ -8656,16 +8594,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Lookup 1.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task\Pivot.Inputs[Pivot Default Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 11]"
-              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task\Multicast 1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
@@ -8688,7 +8616,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               startId="Package\Data Flow Task\Pivot.Outputs[Pivot Default Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Unpivot Output]"
-              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              endId="Package\Data Flow Task\Pivot.Inputs[Pivot Default Input]"
               name="Unpivot Output"
               startId="Package\Data Flow Task\Unpivot.Outputs[Unpivot Output]" />
           </paths>
@@ -9248,21 +9176,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
   ChanelID,
-  Name, OldName,
-  CAST(CONCAT(Name, IIF(OldName is not null, ' ', ''),OldName) as varchar) newAndOldName
-FROM [dbo].[Channel]</property>
+  cast(RTRIM(CONCAT(Name, ' ', OldName)) as varchar(50)) newAndOldName
+from Channel</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select
   ChanelID,
-  Name, OldName,
-  CAST(CONCAT(Name, IIF(OldName is not null, ' ', ''),OldName) as varchar) newAndOldName
-FROM [dbo].[Channel]) [refTable]
+  cast(RTRIM(CONCAT(Name, ' ', OldName)) as varchar(50)) newAndOldName
+from Channel) [refTable]
 where [refTable].[newAndOldName] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -9294,7 +9220,7 @@ where [refTable].[newAndOldName] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ChanelID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="OldName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="newAndOldName" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ChanelID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="newAndOldName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1250"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -9312,8 +9238,8 @@ where [refTable].[newAndOldName] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -9492,8 +9418,8 @@ where [refTable].[newAndOldName] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task 2\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12025,7 +11951,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E9739BFD-DAE9-41C2-8EB4-B9618F6CEF77}"
-          SQLTask:SqlStatementSource="CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Date,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Date &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Date)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Date] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Channel,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Channel &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Channel)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Channel] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Description,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Description &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Description)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Description] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [2nd Description],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [2nd Description] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([2nd Description])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[2nd Description] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [Start time],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [Start time] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([Start time])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Start time] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [Duration],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [Duration] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([Duration])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Duration] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;UPDATE Event&#xA;SET [A4-9] = '0'&#xA;WHERE [A4-9] = 'n.a.'&#xA;GO;&#xA;&#xA;UPDATE Event&#xA;SET [M16-49] = '0'&#xA;WHERE [M16-49] = 'n.a.'&#xA;GO;&#xA;&#xA;UPDATE Event&#xA;SET [A4-15] = '0'&#xA;WHERE [A4-15] = 'n.a.'&#xA;GO;&#xA;&#xA;UPDATE Event&#xA;SET [A16-49] = '0'&#xA;WHERE [A16-49] = 'n.a.'&#xA;GO;&#xA;&#xA;UPDATE Event&#xA;SET [Podgrupa] = '0'&#xA;WHERE [Podgrupa] = 'n.a.'&#xA;GO;&#xA;&#xA;UPDATE Event&#xA;SET [Total Individuals] = '0'&#xA;WHERE [Total Individuals] = 'n.a.'&#xA;GO;&#xA;&#xA;&#xA;----------------------------------------------------------------------&#xA;UPDATE Event&#xA;SET [Variable\Target] = RTRIM(COALESCE(NULLIF(SUBSTRING([Variable\Target], 0, CHARINDEX('[', [Variable\Target])), ''), [Variable\Target]))&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Date,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Date &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Date)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Date] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Channel,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Channel &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Channel)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Channel] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        Description,&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN Description &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX(Description)&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Description] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [2nd Description],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [2nd Description] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([2nd Description])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[2nd Description] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [Start time],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [Start time] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([Start time])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Start time] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;CREATE VIEW TabTMP AS&#xA;  WITH C AS&#xA;  (&#xA;      SELECT&#xA;        EventID,&#xA;        [Duration],&#xA;        relevantid,&#xA;        MAX(relevantid)&#xA;        OVER (&#xA;          ORDER BY EventID&#xA;        ROWS UNBOUNDED PRECEDING ) AS grp&#xA;      FROM dbo.Event&#xA;        CROSS APPLY (VALUES (CASE WHEN [Duration] &lt;&gt; ''&#xA;          THEN EventID END))&#xA;          AS A(relevantid)&#xA;  )&#xA;  SELECT&#xA;    EventID,&#xA;    MAX([Duration])&#xA;    OVER ( PARTITION BY grp&#xA;      ORDER BY EventID&#xA;    ROWS UNBOUNDED PRECEDING ) AS maxcolumn&#xA;  FROM C;&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET Event.[Duration] = TabTMP.maxcolumn&#xA;FROM Event&#xA;  INNER JOIN TabTMP ON Event.EventID = TabTMP.EventID&#xA;GO&#xA;&#xA;&#xA;DROP VIEW dbo.TabTMP&#xA;GO&#xA;&#xA;-----------------------------------------------------------------&#xA;&#xA;UPDATE Event&#xA;SET [A4-9] = '0'&#xA;WHERE [A4-9] = 'n.a.'&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET [M16-49] = '0'&#xA;WHERE [M16-49] = 'n.a.'&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET [A4-15] = '0'&#xA;WHERE [A4-15] = 'n.a.'&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET [A16-49] = '0'&#xA;WHERE [A16-49] = 'n.a.'&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET [Podgrupa] = '0'&#xA;WHERE [Podgrupa] = 'n.a.'&#xA;GO&#xA;&#xA;UPDATE Event&#xA;SET [Total Individuals] = '0'&#xA;WHERE [Total Individuals] = 'n.a.'&#xA;GO&#xA;&#xA;&#xA;----------------------------------------------------------------------&#xA;UPDATE Event&#xA;SET [Variable\Target] = RTRIM(COALESCE(NULLIF(SUBSTRING([Variable\Target], 0, CHARINDEX('[', [Variable\Target])), ''), [Variable\Target]))&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -12299,8 +12225,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Media Group Task 1\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12559,7 +12485,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{63E7646F-F47C-46DA-89AE-638CF0407C1A}"
+          SQLTask:Connection="{F12AC168-35B2-447D-B5F5-9394747487C7}"
           SQLTask:SqlStatementSource="INSERT INTO dbo.TargetGroup(Name, Code) VALUES ('Total Individuals', 'Total Individuals')&#xA;INSERT INTO dbo.TargetGroup(Name, Code) VALUES ('Subgroup', 'Podgrupa')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -12742,8 +12668,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\TargetGroup Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{63E7646F-F47C-46DA-89AE-638CF0407C1A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[hdserver2.database.windows.net.hd2.user]"
+                  connectionManagerID="{F12AC168-35B2-447D-B5F5-9394747487C7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.hd]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -13480,9 +13406,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13516,9 +13440,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13540,9 +13462,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13564,9 +13484,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13660,9 +13578,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13696,9 +13612,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13720,9 +13634,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13756,9 +13668,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13792,9 +13702,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13816,9 +13724,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13852,121 +13758,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Chanel Task 3.Paths[OLE DB Source Output3]"
-          TopLeft="1073.5,49.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17,37.5"
-              Start="0,0"
-              End="17,30">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.75"
-                    Point2="0,18.75"
-                    Point3="4,18.75" />
-                  <mssgle:LineSegment
-                    End="13,18.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,18.75"
-                    Point2="17,18.75"
-                    Point3="17,22.75" />
-                  <mssgle:LineSegment
-                    End="17,30" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
-          TopLeft="884.5,52.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-24,98.5"
-              Start="0,0"
-              End="-24,91">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.25"
-                    Point2="0,49.25"
-                    Point3="-4,49.25" />
-                  <mssgle:LineSegment
-                    End="-20,49.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20,49.25"
-                    Point2="-24,49.25"
-                    Point3="-24,53.25" />
-                  <mssgle:LineSegment
-                    End="-24,91" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
-          TopLeft="275,49.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.5,42.5"
-              Start="0,0"
-              End="12.5,35">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.25"
-                    Point2="0,21.25"
-                    Point3="4,21.25" />
-                  <mssgle:LineSegment
-                    End="8.5,21.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,21.25"
-                    Point2="12.5,21.25"
-                    Point3="12.5,25.25" />
-                  <mssgle:LineSegment
-                    End="12.5,35" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output]"
           TopLeft="660.5,55.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13996,9 +13792,109 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
+          TopLeft="275,49.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,42.5"
+              Start="0,0"
+              End="12.5,35">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.25"
+                    Point2="0,21.25"
+                    Point3="4,21.25" />
+                  <mssgle:LineSegment
+                    End="8.5,21.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,21.25"
+                    Point2="12.5,21.25"
+                    Point3="12.5,25.25" />
+                  <mssgle:LineSegment
+                    End="12.5,35" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
+          TopLeft="1073.5,49.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17,37.5"
+              Start="0,0"
+              End="17,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.75"
+                    Point2="0,18.75"
+                    Point3="4,18.75" />
+                  <mssgle:LineSegment
+                    End="13,18.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,18.75"
+                    Point2="17,18.75"
+                    Point3="17,22.75" />
+                  <mssgle:LineSegment
+                    End="17,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output]"
+          TopLeft="884.5,52.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-24,98.5"
+              Start="0,0"
+              End="-24,91">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.25"
+                    Point2="0,49.25"
+                    Point3="-4,49.25" />
+                  <mssgle:LineSegment
+                    End="-20,49.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-20,49.25"
+                    Point2="-24,49.25"
+                    Point3="-24,53.25" />
+                  <mssgle:LineSegment
+                    End="-24,91" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14020,9 +13916,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14056,9 +13950,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14092,9 +13984,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14221,9 +14111,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14245,9 +14133,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14269,9 +14155,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14333,81 +14217,67 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="120,42"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="73,269" />
+          Size="172,42"
+          Id="Package\Data Flow Task\Script Component 1"
+          TopLeft="261,278" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="54,15" />
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="528,19" />
         <NodeLayout
-          Size="102,42"
-          Id="Package\Data Flow Task\Pivot"
-          TopLeft="73,360" />
+          Size="122,42"
+          Id="Package\Data Flow Task\Lookup 1"
+          TopLeft="294,15" />
         <NodeLayout
           Size="115,42"
           Id="Package\Data Flow Task\Unpivot"
           TopLeft="58,191" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
-          TopLeft="133,311">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-9,49"
-              Start="0,0"
-              End="-9,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="-4,24.5" />
-                  <mssgle:LineSegment
-                    End="-5,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5,24.5"
-                    Point2="-9,24.5"
-                    Point3="-9,28.5" />
-                  <mssgle:LineSegment
-                    End="-9,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Data Flow Task\Pivot"
+          TopLeft="78,278" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="55,103" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Data Flow Task\Lookup"
+          TopLeft="311,104" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\Aggregate"
+          TopLeft="289,189" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="54,15" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Unpivot Output]"
           TopLeft="115.5,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.5,36"
+              EndConnector="13.5,45"
               Start="0,0"
-              End="17.5,28.5">
+              End="13.5,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14" />
+                    End="0,18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="4,18" />
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
                   <mssgle:LineSegment
-                    End="13.5,18" />
+                    End="9.5,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="13.5,18"
-                    Point2="17.5,18"
-                    Point3="17.5,22" />
+                    Point1="9.5,22.5"
+                    Point2="13.5,22.5"
+                    Point3="13.5,26.5" />
                   <mssgle:LineSegment
-                    End="17.5,28.5" />
+                    End="13.5,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14416,24 +14286,54 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="55,103" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="132.75,57">
+          Id="Package\Data Flow Task.Paths[Pivot Default Output]"
+          TopLeft="180,299">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="81,0"
               Start="0,0"
-              End="0,38.5">
+              End="73.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="73.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 01]"
+          TopLeft="347,278">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.3333333333333,-47"
+              Start="0,0"
+              End="25.3333333333333,-39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.8491446345257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.8491446345257"
+                    Point2="0,-27.8491446345257"
+                    Point3="4,-27.8491446345257" />
+                  <mssgle:LineSegment
+                    End="21.3333333333333,-27.8491446345257" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.3333333333333,-27.8491446345257"
+                    Point2="25.3333333333333,-27.8491446345257"
+                    Point3="25.3333333333333,-31.8491446345257" />
+                  <mssgle:LineSegment
+                    End="25.3333333333333,-39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14476,36 +14376,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Data Flow Task\Script Component 1"
-          TopLeft="48,433" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Pivot Default Output]"
-          TopLeft="124,402">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="132.75,57">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10,31"
+              EndConnector="0,46"
               Start="0,0"
-              End="10,23.5">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
-                  <mssgle:LineSegment
-                    End="6,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6,15.5"
-                    Point2="10,15.5"
-                    Point3="10,19.5" />
-                  <mssgle:LineSegment
-                    End="10,23.5" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14514,167 +14398,150 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Data Flow Task\Aggregate"
-          TopLeft="63,507" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 01]"
-          TopLeft="130.25,475">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Multicast 1"
-          TopLeft="67,588" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
-          TopLeft="129.25,549">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39"
-              Start="0,0"
-              End="0,31.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="71,665" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 11]"
-          TopLeft="129.75,630">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="122,42"
-          Id="Package\Data Flow Task\Lookup 1"
-          TopLeft="80,739" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="127.5,707">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="13.5,32"
-              Start="0,0"
-              End="13.5,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12"
-                    Point2="0,16"
-                    Point3="4,16" />
-                  <mssgle:LineSegment
-                    End="9.5,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.5,16"
-                    Point2="13.5,16"
-                    Point3="13.5,20" />
-                  <mssgle:LineSegment
-                    End="13.5,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-41.44138671875,21,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="84,827" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="141,781">
+          TopLeft="416,38">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28.5,46"
+              EndConnector="112,0"
               Start="0,0"
-              End="28.5,38.5">
+              End="104.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="24.5,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.5,23"
-                    Point2="28.5,23"
-                    Point3="28.5,27" />
-                  <mssgle:LineSegment
-                    End="28.5,38.5" />
+                    End="104.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-33.94138671875,28,96.3827734375,11.609375"
+              BoundingBox="4.05861328125,5,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="367.5,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31.5,-47"
+              Start="0,0"
+              End="-31.5,-39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.8349514563107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.8349514563107"
+                    Point2="0,-27.8349514563107"
+                    Point3="-4,-27.8349514563107" />
+                  <mssgle:LineSegment
+                    End="-27.5,-27.8349514563107" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27.5,-27.8349514563107"
+                    Point2="-31.5,-27.8349514563107"
+                    Point3="-31.5,-31.8349514563107" />
+                  <mssgle:LineSegment
+                    End="-31.5,-39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-63.94138671875,-22.8349514563107,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="351.25,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-43"
+              Start="0,0"
+              End="0,-35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[TargetGroup]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Event]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
@@ -14810,9 +14677,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,14.25,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14929,7 +14794,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -14939,7 +14804,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14999,9 +14864,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15047,9 +14910,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15085,7 +14946,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package\TargetGroup Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\TargetGroup Task\OLE DB Source"
@@ -15129,9 +14990,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15153,9 +15012,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15176,65 +15033,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\TargetGroup Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Event]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[TargetGroup]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

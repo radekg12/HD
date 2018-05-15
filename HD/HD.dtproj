@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LENOVO</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9Enhuia8K0GqQIrOfbER2wAAAAACAAAAAAAQZgAAAAEAACAAAACfRmNK4zheKfGqdQgRosOkzGNgPh6KfhUyi8i9f30AkwAAAAAOgAAAAAIAACAAAABaUeX7TwFbyEWefJgSlq/yqz1mpkKjYl/DPSLvJL2mcpAAAAATkIyZgwPkGQM3RAlPYKCy+k6RJ+9MRTjUP4BfetG1w2vd8yUXVneuZW3GQEO4VR0uKPMce0UFYoP6cGY8zT/RkYMC5iYUoD+fka3XQOfpRZDEhwEertNhO7xaAJ81vmQqcVtSa9P+WpvnbOhXCGihlnmIgCGTbwdR3ySDkFvgiPkVwyI7Hn+e5n3psw+NjL9AAAAAW9VUo/mylQhytEZv/v5fg2TrXg5/JQ8obAEtDdKLUxICAV+YlRfeJfnBS5mDnK6J74wWdqVS3LLszAQ1cL8hrw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9Enhuia8K0GqQIrOfbER2wAAAAACAAAAAAAQZgAAAAEAACAAAABU16qMpqFliAdV1nS/7vFY5jESISgxzr8ls9vscmNcDgAAAAAOgAAAAAIAACAAAACh63lHIQpkWOpbxmSTr6gv0h8GQ4ydelS82QdyV8/GF5AAAABcaxDFXci9bPKgnFqHK9FZElKFGwUzwBEvdFjT/jwarep7TrZIRozfei+5u5luWu2AIHm7+jA1w/smOTGy1yudZRA0qz4KblMKvStsnKb82F9Z944xTCLmU9IB4gKZCVpsumJxnI6dROzujEfKFUEFWIHdPbfypA8XYM59DV6+6GCQTYRjMb5kwqVmxZeaPn9AAAAAZJm/nmhco2wbn13LmzL8dcmR/UYFiaxYd+EYvhGB0z0sQfhBUz548jlv+M7wwTf/tbkfmTQ9+zHE/eLCnj8axA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -38,7 +38,7 @@
           <SSIS:ConnectionManager SSIS:Name="Flat File Connection Manager 1.conmgr" />
           <SSIS:ConnectionManager SSIS:Name="Excel Connection Manager.conmgr" />
           <SSIS:ConnectionManager SSIS:Name="hdserwer.database.windows.net.hd.user.conmgr" />
-          <SSIS:ConnectionManager SSIS:Name="hdserver2.database.windows.net.hd2.user.conmgr" />
+          <SSIS:ConnectionManager SSIS:Name="localhost.hd.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
@@ -612,7 +612,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.ConnectionString">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.ConnectionString">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -623,11 +623,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=hdserver2.database.windows.net;User ID=user;Initial Catalog=hd2;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=localhost;Initial Catalog=hd;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.InitialCatalog">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.InitialCatalog">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -638,11 +638,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">hd2</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">hd</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.Password">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -656,7 +656,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.RetainSameConnection">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.RetainSameConnection">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -671,7 +671,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.ServerName">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.ServerName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -682,11 +682,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">hdserver2.database.windows.net</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.hdserver2.database.windows.net.hd2.user.UserName">
+            <SSIS:Parameter SSIS:Name="CM.localhost.hd.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -697,7 +697,6 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">user</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -726,10 +725,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">125</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">180</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{77BEE56A-68F9-426A-99FB-9DD2FEF762D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3DC5A9AD-7A53-499C-B372-5E8D359FADF2}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
