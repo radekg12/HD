@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="182"
-  DTS:VersionGUID="{87127F05-3447-4F7C-9211-3ACCB1A01F80}">
+  DTS:VersionBuild="193"
+  DTS:VersionGUID="{65639667-68E1-41E1-A081-80E7306BC3AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3325,24 +3325,24 @@
               startId="Package\Chanel Task 3\Merge Join 2.Outputs[Merge Join Output]" />
             <path
               refId="Package\Chanel Task 3.Paths[OLE DB Source Output3]"
-              endId="Package\Chanel Task 3\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Chanel Task 3\Data Conversion 1.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\Chanel Task 3\hurt_ChanelCat.Outputs[OLE DB Source Output]" />
+              startId="Package\Chanel Task 3\hurt_mediaGr.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
-              endId="Package\Chanel Task 3\Conditional Split.Inputs[Conditional Split Input]"
-              name="OLE DB Source Output"
-              startId="Package\Chanel Task 3\stage_katKanal.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Chanel Task 3.Paths[OLE DB Source Output]"
               endId="Package\Chanel Task 3\Sort 5.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Chanel Task 3\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
-              endId="Package\Chanel Task 3\Data Conversion 1.Inputs[Data Conversion Input]"
+              refId="Package\Chanel Task 3.Paths[OLE DB Source Output]"
+              endId="Package\Chanel Task 3\Data Conversion.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
-              startId="Package\Chanel Task 3\hurt_mediaGr.Outputs[OLE DB Source Output]" />
+              startId="Package\Chanel Task 3\hurt_ChanelCat.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
+              endId="Package\Chanel Task 3\Conditional Split.Inputs[Conditional Split Input]"
+              name="OLE DB Source Output"
+              startId="Package\Chanel Task 3\stage_katKanal.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Chanel Task 3.Paths[Sort Output]"
               endId="Package\Chanel Task 3\Merge Join.Inputs[Merge Join Right Input]"
@@ -8733,6 +8733,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedDataType="i4"
                       cachedName="DateIDN"
                       lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Inputs[Aggregate Input 1].Columns[TimeEndID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeEndID"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeEndID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Inputs[Aggregate Input 1].Columns[TimeStartID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeStartID"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeStartID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Inputs[Aggregate Input 1].Columns[DateIDN_end]"
+                      cachedDataType="i4"
+                      cachedName="DateIDN_end"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN_end]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Inputs[Aggregate Input 1].Columns[TimeDurationID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeDurationID"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeDurationID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -9008,6 +9034,116 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
                           name="AggregationColumnId">#{Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeEndID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeEndID]"
+                      name="TimeEndID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeEndID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeStartID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeStartID]"
+                      name="TimeStartID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeStartID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[DateIDN_end]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[DateIDN_end]"
+                      name="DateIDN_end">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN_end]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeDurationID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeDurationID]"
+                      name="TimeDurationID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeDurationID]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -9438,23 +9574,11 @@ where [refTable].[newAndOldName] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ChanelID]"
                       lineageId="Package\Data Flow Task 2\Lookup.Outputs[Lookup Match Output].Columns[ChanelID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DurationTime]"
-                      cachedDataType="dbTime"
-                      cachedName="DurationTime"
-                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
-                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DurationTime]" />
-                    <inputColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateID]"
                       cachedDataType="i4"
                       cachedName="DateID"
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTvID]"
                       lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateIDN]"
-                      cachedDataType="i4"
-                      cachedName="DateIDN"
-                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID]"
-                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateIDN]" />
                     <inputColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Description]"
                       cachedDataType="wstr"
@@ -9477,18 +9601,48 @@ where [refTable].[newAndOldName] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTimeTv]"
                       lineageId="Package\Data Flow Task 2\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Start time]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeStartN]"
-                      cachedDataType="dbTime"
-                      cachedName="TimeStartN"
-                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTime]"
-                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeStartN]" />
-                    <inputColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EventID]"
                       cachedDataType="i4"
                       cachedName="EventID"
                       cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StageEventID]"
                       lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[EventID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeStartID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeStartID"
+                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_start]"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeStartID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateIDN]"
+                      cachedDataType="i4"
+                      cachedName="DateIDN"
+                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID_start]"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateIDN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateIDN_end]"
+                      cachedDataType="i4"
+                      cachedName="DateIDN_end"
+                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID_end]"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateIDN_end]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeEndID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeEndID"
+                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_end]"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeEndID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeDurationID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeDurationID"
+                      externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_duration]"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeDurationID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -9496,10 +9650,6 @@ where [refTable].[newAndOldName] = ?</property>
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EventID]"
                       dataType="i4"
                       name="EventID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID]"
-                      dataType="i4"
-                      name="DateID" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateTvID]"
                       dataType="i4"
@@ -9519,24 +9669,40 @@ where [refTable].[newAndOldName] = ?</property>
                       length="100"
                       name="2ndDescription" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTime]"
-                      dataType="dbTime2"
-                      name="StartTime"
-                      scale="7" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTimeTv]"
                       dataType="wstr"
                       length="20"
                       name="StartTimeTv" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
-                      dataType="dbTime2"
-                      name="Duration"
-                      scale="7" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StageEventID]"
                       dataType="i4"
                       name="StageEventID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_start]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="TimeID_start" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_end]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="TimeID_end" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID_start]"
+                      dataType="i4"
+                      name="DateID_start" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateID_end]"
+                      dataType="i4"
+                      name="DateID_end" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeID_duration]"
+                      codePage="1250"
+                      dataType="str"
+                      length="6"
+                      name="TimeID_duration" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -10317,17 +10483,34 @@ public class ScriptMain : UserComponent
         /*
          * Add your code here
          */
+        int dateIDN;
+        TimeSpan timeStartNz;
         Row.EventID = ((Row.EventID - 1) / 5) + 1;
         String[] dateTvSplit = Row.Date.Split('-');
         Row.DateID = int.Parse(dateTvSplit[2] + dateTvSplit[1] + dateTvSplit[0]);
         int tvHour = int.Parse(Row.Starttime.Split(':')[0]);
-        if (tvHour >= 24) Row.DateIDN = int.Parse(dateTvSplit[2] + dateTvSplit[1] + dateTvSplit[0]) + 1;
-        else Row.DateIDN = int.Parse(dateTvSplit[2] + dateTvSplit[1] + dateTvSplit[0]);
+        if (tvHour >= 24) dateIDN = int.Parse(dateTvSplit[2] + dateTvSplit[1] + dateTvSplit[0]) + 1;
+        else dateIDN = int.Parse(dateTvSplit[2] + dateTvSplit[1] + dateTvSplit[0]);
+        Row.DateIDN = dateIDN;
         TimeSpan durationTimez= TimeSpan.Parse(Row.Duration);
         Row.DurationTime = durationTimez;
+        Row.TimeDurationID = durationTimez.ToString().Replace(":", "");
         String[] startTimeTvSplit = Row.Starttime.Split(':');
-        TimeSpan timeStartNz = new TimeSpan((int.Parse(startTimeTvSplit[0]) - 2),int.Parse(startTimeTvSplit[1]) ,int.Parse(startTimeTvSplit[2]));
+        if (tvHour >= 24)  timeStartNz = new TimeSpan((int.Parse(startTimeTvSplit[0]) - 24),int.Parse(startTimeTvSplit[1]) ,int.Parse(startTimeTvSplit[2]));
+        else timeStartNz = new TimeSpan((int.Parse(startTimeTvSplit[0])), int.Parse(startTimeTvSplit[1]), int.Parse(startTimeTvSplit[2]));
         Row.TimeStartN = timeStartNz;
+        Row.TimeStartID = timeStartNz.ToString().Replace(":", "");
+        String timeEndNz = (timeStartNz.Add(durationTimez)).ToString().Replace(":", "");
+        if (timeEndNz.Length > 6) {
+            Row.TimeEndID = timeEndNz.Substring(2);
+            Row.DateIDNend = dateIDN+1;
+            //zle z ta +1
+        }
+        else {
+            Row.TimeEndID = timeEndNz;
+            Row.DateIDNend = dateIDN;
+        }
+        
     }
 
 }
@@ -10843,11 +11026,33 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public Int32 DateIDN
+    public Int32 DateIDNend
     {
         set
         {
             this[17] = value;
+        }
+    }
+    public bool DateIDNend_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(17);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public Int32 DateIDN
+    {
+        set
+        {
+            this[18] = value;
         }
     }
     public bool DateIDN_IsNull
@@ -10856,7 +11061,73 @@ public class Input0Buffer: ScriptBuffer
         {
             if (value)
             {
-                SetNull(17);
+                SetNull(18);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String TimeEndID
+    {
+        set
+        {
+            this[19] = value;
+        }
+    }
+    public bool TimeEndID_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(19);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String TimeStartID
+    {
+        set
+        {
+            this[20] = value;
+        }
+    }
+    public bool TimeStartID_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(20);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    public String TimeDurationID
+    {
+        set
+        {
+            this[21] = value;
+        }
+    }
+    public bool TimeDurationID_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(21);
             }
             else
             {
@@ -10921,7 +11192,7 @@ namespace SC_910149b679444d91ab6f6bf30aa64169.Properties {
     <msb:CodeName>SC_910149b679444d91ab6f6bf30aa64169</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_910149b679444d91ab6f6bf30aa64169</msb:DisplayName>
-    <msb:ProjectId>{4ED30D98-E0B4-4DE7-940F-1D69EB94A18C}</msb:ProjectId>
+    <msb:ProjectId>{947AEA9C-2A10-419C-8AAD-AB87426D5194}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_910149b679444d91ab6f6bf30aa64169.csproj" />
@@ -11160,193 +11431,211 @@ namespace SC_910149b679444d91ab6f6bf30aa64169.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEcG9FoAAAAAAAAAAOAAIiALATAAACIAAAAIAAAAAAAAMkEA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAA21DlsAAAAAAAAAAOAAIiALATAAACYAAAAIAAAAAAAAlkQA
 AAAgAAAAYAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACgAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOBAAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAEREAABPAAAAAGAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAIAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAOCEAAAAgAAAAIgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAkAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAIAAAAACAAAAKgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAU
-QQAAAAAAAEgAAAACAAUAfCYAAKwZAAABAAAAAAAAAChAAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAUA7AAAAAEAABEDA28GAAAG
-F1kbWxdYbwcAAAYDbwoAAAYXjRsAAAElFh8tnW8SAAAKCgMGGJoGF5oGFpooEwAACigUAAAKb0AA
-AAYDbxoAAAYXjRsAAAElFh86nW8SAAAKFpooFAAACh8YMh0DBhiaBheaBhaaKBMAAAooFAAAChdY
-b0QAAAYrGQMGGJoGF5oGFpooEwAACigUAAAKb0QAAAYDbx4AAAYoFQAACgsDB29CAAAGA28aAAAG
-F40bAAABJRYfOp1vEgAACgwSAwgWmigUAAAKGFkIF5ooFAAACggYmigUAAAKKBYAAAoDCW8+AAAG
-Kh4CKEgAAAYqKgIDBAUoFwAACipSAnsYAAAKAnsZAAAKFpRvGgAACio6AhYDjB0AAAEoGwAACioi
-AhYoHAAACipaAywIAhYoHQAACipyAQAAcHMeAAAKelICexgAAAoCexkAAAoXlG8fAAAKKiYCFwMo
-GwAACioiAhcoHAAACipaAywIAhcoHQAACipyAQAAcHMeAAAKelICexgAAAoCexkAAAoYlG8fAAAK
-KiYCGAMoGwAACioiAhgoHAAACipaAywIAhgoHQAACipyAQAAcHMeAAAKelICexgAAAoCexkAAAoZ
-lG8fAAAKKiYCGQMoGwAACioiAhkoHAAACipaAywIAhkoHQAACipyAQAAcHMeAAAKelICexgAAAoC
-exkAAAoalG8fAAAKKiYCGgMoGwAACioiAhooHAAACipaAywIAhooHQAACipyAQAAcHMeAAAKelIC
-exgAAAoCexkAAAoblG8fAAAKKiYCGwMoGwAACioiAhsoHAAACipaAywIAhsoHQAACipyAQAAcHMe
-AAAKelICexgAAAoCexkAAAoclG8fAAAKKiYCHAMoGwAACioiAhwoHAAACipaAywIAhwoHQAACipy
-AQAAcHMeAAAKelICexgAAAoCexkAAAodlG8fAAAKKiYCHQMoGwAACioiAh0oHAAACipaAywIAh0o
-HQAACipyAQAAcHMeAAAKelICexgAAAoCexkAAAoelG8fAAAKKiYCHgMoGwAACioiAh4oHAAACipa
-AywIAh4oHQAACipyAQAAcHMeAAAKelYCexgAAAoCexkAAAofCZRvHwAACioqAh8JAygbAAAKKiYC
-HwkoHAAACipeAywJAh8JKB0AAAoqcgEAAHBzHgAACnpWAnsYAAAKAnsZAAAKHwqUbx8AAAoqKgIf
-CgMoGwAACiomAh8KKBwAAAoqXgMsCQIfCigdAAAKKnIBAABwcx4AAAp6VgJ7GAAACgJ7GQAACh8L
-lG8fAAAKKioCHwsDKBsAAAoqJgIfCygcAAAKKl4DLAkCHwsoHQAACipyAQAAcHMeAAAKelYCexgA
-AAoCexkAAAofDJRvHwAACioqAh8MAygbAAAKKiYCHwwoHAAACipeAywJAh8MKB0AAAoqcgEAAHBz
-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
-BgAuAAsAIQEuABMAKgEuABsASQEuACMAUgEuACsAewEuADMAewEuADsAewEuAEMAUgEuAEsAgQEu
-AFMAewEuAFsAmAFDAGMA4gHhAHsA4gHjAGsA4gGpBHMASQHJBHMASQEbAAMAAQAHACUACAAnAAAA
-nAABAQAAyAQFAQAAzgEJAQAAfgUFAQAA7QMJAQAAoQUFAQAAhAcJAQAAJQYFAQAAggcJAQAAIwYF
-AQAASwEJAQAAWQUFAQAA7QYJAQAAyAUFAQAAcwkJAQAAjgYFAQAAKgkJAQAAWAYFAQAA2AAJAQAA
-GAUFAQAAKgAJAQAAUgQFAQAAPgAJAQAAdAQFAQAAFwAJAQAAMQQFAQAAUAAJAQAAlAQFAQAAvAAN
-AQAA7gQFAQAAhQABAQAAowQFAQAALAENAQAALAUFAQAAsAABAQAA2wQFAQAA9wcSAQAAmwEXAQAA
-mAkcAQIABgADAAEABwADAAIACAAFAAEACQAFAAIACgAHAAEACwAHAAIADAAJAAEADQAJAAIADgAL
-AAEADwALAAIAEAANAAEAEQANAAIAEgAPAAEAEwAPAAIAFAARAAEAFQARAAIAFgATAAEAFwATAAIA
-GAAVAAEAGQAVAAIAGgAXAAEAGwAXAAIAHAAZAAEAHQAZAAIAHgAbAAEAHwAbAAIAIAAdAAEAIQAd
-AAIAIgAfAAEAIwAfAAIAJAAhAAEAJQAhAAIAJgAjAAEAJwAjAAIAKAAlAAEAKQAlAAIAKgAnAAEA
-KwAnAAIALAApAAEALQApAAIALgArAAEALwArAAIAMAAtAAEAMQAtAAIAMgAvAAEAMwAvAAIANAAx
-AAEANQAxAAIANgAzAAEANwAzAAIAOAA1AAEAOQA1AAIAOgA3AAEAOwA3AAIAPAA5AAEAPQA5AAEA
-PgA7AAEAPwA9AAEAQAA/AAEAQQBBAAEAQgBDAAEAQwBFAAEARABHAAEARQBJAAIATwBLAAIAUABN
-AAEAUQBNAAIAUgBPAASAAAABAAAAAAAAAAAAAAAAAFQAAAAEAAAAAAAAAAAAAACVAOEAAAAAAA4A
-AAAAAAAAAAAAAJ4AzgkAAAAADgAAAAAAAAAAAAAAngDrCQAAAAAEAAAAAAAAAAAAAACVALUGAAAA
-AAAAAAABAAAAWAgAAAAAAEdldEludDMyAGdldF9BNDE1AHNldF9BNDE1AGdldF9BMTY0OQBzZXRf
-QTE2NDkAZ2V0X00xNjQ5AHNldF9NMTY0OQBnZXRfQTQ5AHNldF9BNDkAU0NfOTEwMTQ5YjY3OTQ0
-NGQ5MWFiNmY2YmYzMGFhNjQxNjkAPE1vZHVsZT4Ac2V0X0RhdGVJRABnZXRfRXZlbnRJRABzZXRf
-RXZlbnRJRABJbnB1dElEAHNldF9EYXRlSUROAHNldF9UaW1lU3RhcnROAGdldF9Qb2RncnVwYQBz
-ZXRfUG9kZ3J1cGEAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAFJ1bnRpbWVUeXBlSGFuZGxlAEdl
-dFR5cGVGcm9tSGFuZGxlAElucHV0TmFtZQBzZXRfRHVyYXRpb25UaW1lAGdldF9TdGFydHRpbWUA
-c2V0X1N0YXJ0dGltZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBUeXBlAGdldF9D
-dWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFz
-ZQBQYXJzZQBnZXRfRGF0ZQBzZXRfRGF0ZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdl
-bmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVB
-dHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUA
-QXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2Vt
-Ymx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENv
-bXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFz
-c2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0
-cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJp
-YnV0ZQBQcmVFeGVjdXRlAFBvc3RFeGVjdXRlAHZhbHVlAFN5c3RlbS5SdW50aW1lLlZlcnNpb25p
-bmcAR2V0U3RyaW5nAFN5c3RlbS5Db21wb25lbnRNb2RlbABnZXRfQ2hhbm5lbABzZXRfQ2hhbm5l
-bABTQ185MTAxNDliNjc5NDQ0ZDkxYWI2ZjZiZjMwYWE2NDE2OS5kbGwAZ2V0X0E0MTVfSXNOdWxs
-AHNldF9BNDE1X0lzTnVsbABnZXRfQTE2NDlfSXNOdWxsAHNldF9BMTY0OV9Jc051bGwAZ2V0X00x
-NjQ5X0lzTnVsbABzZXRfTTE2NDlfSXNOdWxsAGdldF9BNDlfSXNOdWxsAHNldF9BNDlfSXNOdWxs
-AHNldF9EYXRlSURfSXNOdWxsAGdldF9FdmVudElEX0lzTnVsbABzZXRfRXZlbnRJRF9Jc051bGwA
-c2V0X0RhdGVJRE5fSXNOdWxsAHNldF9UaW1lU3RhcnROX0lzTnVsbABnZXRfUG9kZ3J1cGFfSXNO
-dWxsAHNldF9Qb2RncnVwYV9Jc051bGwAc2V0X0R1cmF0aW9uVGltZV9Jc051bGwAZ2V0X1N0YXJ0
-dGltZV9Jc051bGwAc2V0X1N0YXJ0dGltZV9Jc051bGwAZ2V0X0RhdGVfSXNOdWxsAHNldF9EYXRl
-X0lzTnVsbABnZXRfQ2hhbm5lbF9Jc051bGwAc2V0X0NoYW5uZWxfSXNOdWxsAGdldF9EdXJhdGlv
-bl9Jc051bGwAc2V0X0R1cmF0aW9uX0lzTnVsbABnZXRfRGVzY3JpcHRpb25fSXNOdWxsAHNldF9E
-ZXNjcmlwdGlvbl9Jc051bGwAZ2V0X25kRGVzY3JpcHRpb25fSXNOdWxsAHNldF9uZERlc2NyaXB0
-aW9uX0lzTnVsbABnZXRfVG90YWxJbmRpdmlkdWFsc19Jc051bGwAc2V0X1RvdGFsSW5kaXZpZHVh
-bHNfSXNOdWxsAGdldF9WYXJpYWJsZVRhcmdldF9Jc051bGwAc2V0X1ZhcmlhYmxlVGFyZ2V0X0lz
-TnVsbABTZXROdWxsAHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBUaW1lU3BhbgBTY3JpcHRN
-YWluAGdldF9EdXJhdGlvbgBzZXRfRHVyYXRpb24AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVt
-Lkdsb2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ASW52YWxpZE9wZXJhdGlvbkV4Y2VwdGlv
-bgBnZXRfRGVzY3JpcHRpb24Ac2V0X0Rlc2NyaXB0aW9uAGdldF9uZERlc2NyaXB0aW9uAHNldF9u
-ZERlc2NyaXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABP
-dXRwdXRNYXAAQ2hhcgBJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdl
-dF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0ZW0u
-UnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfOTEwMTQ5YjY3OTQ0
-NGQ5MWFiNmY2YmYzMGFhNjQxNjkuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERlYnVn
-Z2luZ01vZGVzAFNDXzkxMDE0OWI2Nzk0NDRkOTFhYjZmNmJmMzBhYTY0MTY5LlByb3BlcnRpZXMA
-VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBn
-ZXRfVG90YWxJbmRpdmlkdWFscwBzZXRfVG90YWxJbmRpdmlkdWFscwBFcXVhbHMAQ29ubmVjdGlv
-bnMAQ29uY2F0AE9iamVjdABnZXRfVmFyaWFibGVUYXJnZXQAc2V0X1ZhcmlhYmxlVGFyZ2V0AEVu
-ZE9mUm93c2V0AFNwbGl0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50
-AFNjcmlwdENvbXBvbmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5T
-cWxTZXJ2ZXIuUGlwZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJ
-bnB1dFJvdwBOZXh0Um93AGdldF9Bc3NlbWJseQAAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQBy
-AHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEA
-cwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABp
-AG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AOQAxADAAMQA0ADkAYgA2ADcA
-OQA0ADQANABkADkAMQBhAGIANgBmADYAYgBmADMAMABhAGEANgA0ADEANgA5AC4AUAByAG8AcABl
-AHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAABGid0ACd+4Tqb39MDm88BTAAQgAQEIAyAA
-AQUgAQEREQQgAQEOBSABARFdCgcEHQ4ROR0OETkGIAEdDh0DBgADDg4ODgQAAQgOBQABETkOBiAD
-AQgICAkgAwESQR0IEkUDBhJBAwYdCAQgAQgIBSACAQgcBCABAggEIAEOCAMgAAIGIAICDhF9BSAB
-HQgICAABEoCBEYCFBSAAEoCJByACAQ4SgIkIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkkD
-BhJVAwYSWQMGEiAFIAEBEgwDIAAIBCABAQIDIAAOBSABARE5CSAEAQgOEkESRQUgAQESSQQAABJV
-BAAAElkFAAEBElkEAAASIAMAAAEDKAAIAygAAgMoAA4EKAAROQQIABJVBAgAElkECAASIAgBAAgA
-AAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfOTEwMTQ5
-YjY3OTQ0NGQ5MWFiNmY2YmYzMGFhNjQxNjkAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxOAAA
-SQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIu
-TkVUIEZyYW1ld29yayA0LjUEAQAAAAC0AAAAzsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMu
-UmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJh
-bCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRp
-bWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAACEEAAAAAAAAAAAAAIkEAAAAgAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAABRBAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwA
-AAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAA
-AAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWGAA
-AOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+
-AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBh
-AHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAA
-sARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAwADAANABi
-ADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4AeQBOAGEA
-bQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAAAFMAQwBf
-ADkAMQAwADEANAA5AGIANgA3ADkANAA0ADQAZAA5ADEAYQBiADYAZgA2AGIAZgAzADAAYQBhADYA
-NAAxADYAOQAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAwAC4AMAAA
-AHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8AOQAxADAAMQA0ADkAYgA2ADcA
-OQA0ADQANABkADkAMQBhAGIANgBmADYAYgBmADMAMABhAGEANgA0ADEANgA5AC4AZABsAGwAAABI
-ABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgAdAAgAEAA
-IAAgADIAMAAxADgAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAA
-AHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA5ADEAMAAxADQA
-OQBiADYANwA5ADQANAA0AGQAOQAxAGEAYgA2AGYANgBiAGYAMwAwAGEAYQA2ADQAMQA2ADkALgBk
-AGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8AOQAxADAAMQA0ADkA
-YgA2ADcAOQA0ADQANABkADkAMQBhAGIANgBmADYAYgBmADMAMABhAGEANgA0ADEANgA5AAAANAAI
-AAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgACAABAEEA
-cwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAnCQAAAAgAAAAJgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAYAAAAAYAAAAoAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAIAAAAACAAAALgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAB4
+RAAAAAAAAEgAAAACAAUA3CcAALAbAAABAAAAAAAAAIxDAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAUAuQEAAAEAABEDA28GAAAG
+F1kbWxdYbwcAAAYDbwoAAAYXjRsAAAElFh8tnW8SAAAKDAMIGJoIF5oIFpooEwAACigUAAAKb0AA
+AAYDbxoAAAYXjRsAAAElFh86nW8SAAAKFpooFAAACg0JHxgyGAgYmggXmggWmigTAAAKKBQAAAoX
+WAorFAgYmggXmggWmigTAAAKKBQAAAoKAwZvRgAABgNvHgAABigVAAAKEwQDEQRvQgAABgMSBP4W
+DgAAAW8WAAAKcgEAAHByBQAAcG8XAAAKb0wAAAYDbxoAAAYXjRsAAAElFh86nW8SAAAKEwUJHxgy
+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
+AwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAA
+AQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDp
+AwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDpAwAAAQDVAAAAAgBqAQAA
+AwCyCAAABACBCAAAAQCyCAAAAQABCwAAAQCKCgAAAQCKCgAAAQDpAwkAzQgBABEAzQgGABkAzQgK
+ACkAzQgQADEAzQgQADkAzQgQAEEAzQgQAEkAzQgQAFEAzQgQAFkAzQgQAGEAzQgQAGkAzQgGAKEA
+zQgGAMEAzQgVANEAzQgGAJEA0gMGAJEA3QMGAOEAVAorAOEAFAoyAOkABwI5AHEABwI+AJkACQRE
+AOEALgFIAHEAzQhOAHEAGwFVAOEAJgRcAOEAHARgAHkAzQhlAHkAsghvAHkAqQlzAIEAAQB3AHkA
+cgd8AHkAYweCAHkAagcBAPEAzQgQAIEAEgRgAHkA/QqHAHkASAqHAJEAzQgGAOEAAQqLAJEAvQmS
+AJkAzQgGAAEBWAGYAAEBBQuhAKkAzQinAMkAzQgGAC4ACwAzAS4AEwA8AS4AGwBbAS4AIwBkAS4A
+KwCNAS4AMwCNAS4AOwCNAS4AQwBkAS4ASwCTAS4AUwCNAS4AWwCqAUMAYwD0AeEAewD0AeMAawD0
+AakFcwBbAckFcwBbARsAAwABAAcALQAIAC8AAAC9ABMBAABhBRcBAAAaAhsBAABEBhcBAABXBBsB
+AABnBhcBAABKCBsBAADrBhcBAABICBsBAADpBhcBAACXARsBAAAfBhcBAACzBxsBAACOBhcBAAA5
+ChsBAABUBxcBAADwCRsBAAAeBxcBAAAJARsBAADIBRcBAAAqABsBAAC8BBcBAAA+ABsBAADeBBcB
+AAAXABsBAACbBBcBAABQABsBAAD+BBcBAADtAB8BAACeBRcBAACTABMBAAAiBRcBAAB4AR8BAADy
+BRcBAAAjARMBAADcBRcBAADhABMBAACLBRcBAACFABsBAAANBRcBAADJABsBAAB0BRcBAACeABsB
+AAA0BRcBAAC9CCQBAADnASkBAABeCi4BAgAGAAMAAQAHAAMAAgAIAAUAAQAJAAUAAgAKAAcAAQAL
+AAcAAgAMAAkAAQANAAkAAgAOAAsAAQAPAAsAAgAQAA0AAQARAA0AAgASAA8AAQATAA8AAgAUABEA
+AQAVABEAAgAWABMAAQAXABMAAgAYABUAAQAZABUAAgAaABcAAQAbABcAAgAcABkAAQAdABkAAgAe
+ABsAAQAfABsAAgAgAB0AAQAhAB0AAgAiAB8AAQAjAB8AAgAkACEAAQAlACEAAgAmACMAAQAnACMA
+AgAoACUAAQApACUAAgAqACcAAQArACcAAgAsACkAAQAtACkAAgAuACsAAQAvACsAAgAwAC0AAQAx
+AC0AAgAyAC8AAQAzAC8AAgA0ADEAAQA1ADEAAgA2ADMAAQA3ADMAAgA4ADUAAQA5ADUAAgA6ADcA
+AQA7ADcAAgA8ADkAAQA9ADkAAQA+ADsAAQA/AD0AAQBAAD8AAQBBAEEAAQBCAEMAAQBDAEUAAQBE
+AEcAAQBFAEkAAQBGAEsAAQBHAE0AAQBIAE8AAQBJAFEAAQBKAFMAAQBLAFUAAQBMAFcAAQBNAFkA
+AgBXAFsAAgBYAF0AAQBZAF0AAgBaAF8ABIAAAAEAAAAAAAAAAAAAAAAAVAAAAAQAAAAAAAAAAAAA
+AK8AEgEAAAAADgAAAAAAAAAAAAAAuACUCgAAAAAOAAAAAAAAAAAAAAC4ALEKAAAAAAQAAAAAAAAA
+AAAAAK8AewcAAAAAAAAAAAEAAAAeCQAAAAAAAABHZXRJbnQzMgBnZXRfQTQxNQBzZXRfQTQxNQBn
+ZXRfQTE2NDkAc2V0X0ExNjQ5AGdldF9NMTY0OQBzZXRfTTE2NDkAZ2V0X0E0OQBzZXRfQTQ5AFND
+XzkxMDE0OWI2Nzk0NDRkOTFhYjZmNmJmMzBhYTY0MTY5ADxNb2R1bGU+AHNldF9UaW1lRW5kSUQA
+c2V0X0RhdGVJRABzZXRfVGltZUR1cmF0aW9uSUQAZ2V0X0V2ZW50SUQAc2V0X0V2ZW50SUQAc2V0
+X1RpbWVTdGFydElEAElucHV0SUQAc2V0X0RhdGVJRE4Ac2V0X1RpbWVTdGFydE4AZ2V0X1BvZGdy
+dXBhAHNldF9Qb2RncnVwYQBtc2NvcmxpYgBBZGQAc2V0X0RhdGVJRE5lbmQAUmVwbGFjZQBkZWZh
+dWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1l
+AHNldF9EdXJhdGlvblRpbWUAZ2V0X1N0YXJ0dGltZQBzZXRfU3RhcnR0aW1lAE1pY3Jvc29mdC5T
+cWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3Vy
+Y2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAFBhcnNlAGdldF9EYXRlAHNldF9EYXRl
+AEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2Vy
+Tm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVB
+dHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0
+ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRl
+AEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJp
+YnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUA
+U1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0
+cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1
+dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBHZXRTdHJpbmcAU3Vi
+c3RyaW5nAGdldF9MZW5ndGgAU3lzdGVtLkNvbXBvbmVudE1vZGVsAGdldF9DaGFubmVsAHNldF9D
+aGFubmVsAFNDXzkxMDE0OWI2Nzk0NDRkOTFhYjZmNmJmMzBhYTY0MTY5LmRsbABnZXRfQTQxNV9J
+c051bGwAc2V0X0E0MTVfSXNOdWxsAGdldF9BMTY0OV9Jc051bGwAc2V0X0ExNjQ5X0lzTnVsbABn
+ZXRfTTE2NDlfSXNOdWxsAHNldF9NMTY0OV9Jc051bGwAZ2V0X0E0OV9Jc051bGwAc2V0X0E0OV9J
+c051bGwAc2V0X1RpbWVFbmRJRF9Jc051bGwAc2V0X0RhdGVJRF9Jc051bGwAc2V0X1RpbWVEdXJh
+dGlvbklEX0lzTnVsbABnZXRfRXZlbnRJRF9Jc051bGwAc2V0X0V2ZW50SURfSXNOdWxsAHNldF9U
+aW1lU3RhcnRJRF9Jc051bGwAc2V0X0RhdGVJRE5fSXNOdWxsAHNldF9UaW1lU3RhcnROX0lzTnVs
+bABnZXRfUG9kZ3J1cGFfSXNOdWxsAHNldF9Qb2RncnVwYV9Jc051bGwAc2V0X0RhdGVJRE5lbmRf
+SXNOdWxsAHNldF9EdXJhdGlvblRpbWVfSXNOdWxsAGdldF9TdGFydHRpbWVfSXNOdWxsAHNldF9T
+dGFydHRpbWVfSXNOdWxsAGdldF9EYXRlX0lzTnVsbABzZXRfRGF0ZV9Jc051bGwAZ2V0X0NoYW5u
+ZWxfSXNOdWxsAHNldF9DaGFubmVsX0lzTnVsbABnZXRfRHVyYXRpb25fSXNOdWxsAHNldF9EdXJh
+dGlvbl9Jc051bGwAZ2V0X0Rlc2NyaXB0aW9uX0lzTnVsbABzZXRfRGVzY3JpcHRpb25fSXNOdWxs
+AGdldF9uZERlc2NyaXB0aW9uX0lzTnVsbABzZXRfbmREZXNjcmlwdGlvbl9Jc051bGwAZ2V0X1Rv
+dGFsSW5kaXZpZHVhbHNfSXNOdWxsAHNldF9Ub3RhbEluZGl2aWR1YWxzX0lzTnVsbABnZXRfVmFy
+aWFibGVUYXJnZXRfSXNOdWxsAHNldF9WYXJpYWJsZVRhcmdldF9Jc051bGwAU2V0TnVsbABzZXRf
+SXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AVGltZVNwYW4AU2NyaXB0TWFpbgBnZXRfRHVyYXRpb24A
+c2V0X0R1cmF0aW9uAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5
+c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AZ2V0X0Rlc2NyaXB0aW9u
+AHNldF9EZXNjcmlwdGlvbgBnZXRfbmREZXNjcmlwdGlvbgBzZXRfbmREZXNjcmlwdGlvbgBTdHJp
+bmdDb21wYXJpc29uAEN1bHR1cmVJbmZvAE91dHB1dE5hbWVNYXAAT3V0cHV0TWFwAENoYXIASW5w
+dXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2Vy
+AC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJT
+ZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzkxMDE0OWI2Nzk0NDRkOTFhYjZmNmJmMzBhYTY0
+MTY5LlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ185MTAx
+NDliNjc5NDQ0ZDkxYWI2ZjZiZjMwYWE2NDE2OS5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBCdWZmZXJD
+b2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MAZ2V0X1RvdGFsSW5kaXZpZHVh
+bHMAc2V0X1RvdGFsSW5kaXZpZHVhbHMARXF1YWxzAENvbm5lY3Rpb25zAENvbmNhdABPYmplY3QA
+Z2V0X1ZhcmlhYmxlVGFyZ2V0AHNldF9WYXJpYWJsZVRhcmdldABFbmRPZlJvd3NldABTcGxpdABn
+ZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQA
+TWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5l
+SG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBn
+ZXRfQXNzZW1ibHkAAAAAAzoAAAEAgJtJAHMATgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMA
+YQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBu
+ACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUA
+YQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AOQAxADAAMQA0ADkAYgA2ADcAOQA0ADQANABk
+ADkAMQBhAGIANgBmADYAYgBmADMAMABhAGEANgA0ADEANgA5AC4AUAByAG8AcABlAHIAdABpAGUA
+cwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAAA9kQzxpQeJBoZFcvYm3wQQABCABAQgDIAABBSABARER
+BCABAQ4FIAEBEV0PBwgIETkdDggROR0ODhE5BiABHQ4dAwYAAw4ODg4EAAEIDgUAARE5DgMgAA4F
+IAIODg4GIAMBCAgIBiABETkROQMgAAgEIAEOCAkgAwESQR0IEkUDBhJBAwYdCAQgAQgIBSACAQgc
+BCABAggDIAACBiACAg4RfQUgAR0ICAgAARKAgRGAhQUgABKAiQcgAgEOEoCJCLd6XFYZNOCJCImE
+Xc2AgMyRAwYSFAMGEhgDBhJJAwYSVQMGElkDBhIgBSABARIMBCABAQIFIAEBETkJIAQBCA4SQRJF
+BSABARJJBAAAElUEAAASWQUAAQESWQQAABIgAwAAAQMoAAgDKAACAygADgQoABE5BAgAElUECAAS
+WQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgB
+ACNTQ185MTAxNDliNjc5NDQ0ZDkxYWI2ZjZiZjMwYWE2NDE2OQAABQEAAAAAFgEAEUNvcHlyaWdo
+dCBAICAyMDE4AABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rp
+c3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNQQBAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0
+ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBD
+dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJl
+c291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAGxEAAAAAAAA
+AAAAAIZEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4RAAAAAAAAAAAAAAAAF9Db3JEbGxNYWlu
+AG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAA
+GAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAAAFhgAADs
+AwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAAvQTv/gAA
+AQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAABAFYAYQBy
+AEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAAAAAAALAE
+TAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAAMAAwADQAYgAw
+AAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBuAHkATgBhAG0A
+ZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAABTAEMAXwA5
+ADEAMAAxADQAOQBiADYANwA5ADQANAA0AGQAOQAxAGEAYgA2AGYANgBiAGYAMwAwAGEAYQA2ADQA
+MQA2ADkAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4AMAAuADAAAABw
+ACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADkAMQAwADEANAA5AGIANgA3ADkA
+NAA0ADQAZAA5ADEAYQBiADYAZgA2AGIAZgAzADAAYQBhADYANAAxADYAOQAuAGQAbABsAAAASAAS
+AAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAA
+IAAyADAAMQA4AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4
+ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AOQAxADAAMQA0ADkA
+YgA2ADcAOQA0ADQANABkADkAMQBhAGIANgBmADYAYgBmADMAMABhAGEANgA0ADEANgA5AC4AZABs
+AGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADkAMQAwADEANAA5AGIA
+NgA3ADkANAA0ADQAZAA5ADEAYQBiADYAZgA2AGIAZgAzADAAYQBhADYANAAxADYAOQAAADQACAAB
+AFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMA
+cwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAwAAAA0MQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAMAAAAmDQAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -11355,7 +11644,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </arrayElements>
                 </property>
                 <property
@@ -11391,7 +11680,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">1A</property>
+                  typeConverter="NOTBROWSABLE">B4</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -11538,10 +11827,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DurationTime]"
                       name="DurationTime" />
                     <outputColumn
+                      refId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN_end]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN_end]"
+                      name="DateIDN_end" />
+                    <outputColumn
                       refId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[DateIDN]"
                       name="DateIDN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeEndID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeEndID]"
+                      name="TimeEndID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeStartID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeStartID]"
+                      name="TimeStartID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeDurationID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Script Component.Outputs[Output 0].Columns[TimeDurationID]"
+                      name="TimeDurationID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -11740,6 +12055,76 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Sort.Inputs[Sort Input].Columns[TimeEndID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeEndID"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeEndID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Sort.Inputs[Sort Input].Columns[TimeStartID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeStartID"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeStartID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Sort.Inputs[Sort Input].Columns[DateIDN_end]"
+                      cachedDataType="i4"
+                      cachedName="DateIDN_end"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[DateIDN_end]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 2\Sort.Inputs[Sort Input].Columns[TimeDurationID]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TimeDurationID"
+                      lineageId="Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeDurationID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -11889,6 +12274,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[DateIDN]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeEndID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeEndID]"
+                      name="TimeEndID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeEndID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeStartID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeStartID]"
+                      name="TimeStartID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeStartID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateIDN_end]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[DateIDN_end]"
+                      name="DateIDN_end">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[DateIDN_end]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeDurationID]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 2\Sort.Outputs[Sort Output].Columns[TimeDurationID]"
+                      name="TimeDurationID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 2\Aggregate.Outputs[Aggregate Output 1].Columns[TimeDurationID]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -13406,7 +13849,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13440,7 +13885,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13462,7 +13909,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13484,7 +13933,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13578,7 +14029,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13612,7 +14065,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13634,7 +14089,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13668,7 +14125,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13702,7 +14161,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13724,7 +14185,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13758,79 +14221,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Chanel Task 3.Paths[OLE DB Source Output3]"
-          TopLeft="660.5,55.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11.5,46.5"
-              Start="0,0"
-              End="11.5,39">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.25"
-                    Point2="0,23.25"
-                    Point3="4,23.25" />
-                  <mssgle:LineSegment
-                    End="7.5,23.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.5,23.25"
-                    Point2="11.5,23.25"
-                    Point3="11.5,27.25" />
-                  <mssgle:LineSegment
-                    End="11.5,39" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
-          TopLeft="275,49.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.5,42.5"
-              Start="0,0"
-              End="12.5,35">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.25"
-                    Point2="0,21.25"
-                    Point3="4,21.25" />
-                  <mssgle:LineSegment
-                    End="8.5,21.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.5,21.25"
-                    Point2="12.5,21.25"
-                    Point3="12.5,25.25" />
-                  <mssgle:LineSegment
-                    End="12.5,35" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
           TopLeft="1073.5,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13860,11 +14257,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Chanel Task 3.Paths[OLE DB Source Output]"
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output2]"
           TopLeft="884.5,52.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -13894,7 +14293,81 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output1]"
+          TopLeft="275,49.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,42.5"
+              Start="0,0"
+              End="12.5,35">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.25"
+                    Point2="0,21.25"
+                    Point3="4,21.25" />
+                  <mssgle:LineSegment
+                    End="8.5,21.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,21.25"
+                    Point2="12.5,21.25"
+                    Point3="12.5,25.25" />
+                  <mssgle:LineSegment
+                    End="12.5,35" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chanel Task 3.Paths[OLE DB Source Output]"
+          TopLeft="660.5,55.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,46.5"
+              Start="0,0"
+              End="11.5,39">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.25"
+                    Point2="0,23.25"
+                    Point3="4,23.25" />
+                  <mssgle:LineSegment
+                    End="7.5,23.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,23.25"
+                    Point2="11.5,23.25"
+                    Point3="11.5,27.25" />
+                  <mssgle:LineSegment
+                    End="11.5,39" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13916,7 +14389,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13950,7 +14425,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13984,7 +14461,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14111,7 +14590,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14133,7 +14614,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14155,7 +14638,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14283,7 +14768,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14305,7 +14792,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14339,7 +14828,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14373,7 +14864,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14395,7 +14888,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14477,7 +14972,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14502,7 +14999,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -14512,7 +15009,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14525,7 +15022,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -14535,7 +15032,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14794,7 +15291,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -14804,7 +15301,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14864,7 +15361,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14910,7 +15409,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14946,7 +15447,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package\TargetGroup Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150,42"
           Id="Package\TargetGroup Task\OLE DB Source"
@@ -14990,7 +15491,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15012,7 +15515,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -9,6 +9,8 @@ GO
 DROP TABLE [dbo].[Channel];
 GO
 
+DROP TABLE [dbo].[Time];
+GO
 
 DROP TABLE [dbo].[Date];
 GO
@@ -30,6 +32,22 @@ GO
 
 DROP FUNCTION [dbo].GetEasterHolidays
 GO
+
+--************************************** [dbo].[Time]
+
+CREATE TABLE [dbo].[Time]
+(
+ [Time]   TIME NOT NULL ,
+ [Hour]   TINYINT NOT NULL ,
+ [Minute] TINYINT NOT NULL ,
+ [Second] TINYINT NOT NULL ,
+ [AmPm]   CHAR(2) NOT NULL ,
+ [TimeID] CHAR(6) NOT NULL ,
+
+ CONSTRAINT [PK_Time] PRIMARY KEY CLUSTERED ([TimeID] ASC)
+);
+GO
+
 --************************************** [dbo].[Date]
 
 CREATE TABLE [dbo].[Date]
@@ -134,24 +152,34 @@ GO
 
 CREATE TABLE [dbo].[Event]
 (
- [EventID]        INT IDENTITY (1, 1) NOT NULL ,
- [DateID]         INT NOT NULL ,
+ [EventID]         INT IDENTITY (1, 1) NOT NULL ,
+ [DateID_start]    INT NOT NULL ,
+ [DateID_end]      INT NOT NULL ,
  [StageEventID]    INT NOT NULL ,
- [DateTvID]       INT NOT NULL ,
- [ChanelID]       INT NULL ,
- [Description]    NVARCHAR(100) NOT NULL ,
- [2ndDescription] NVARCHAR(100) NOT NULL ,
- [StartTime]      TIME NOT NULL ,
- [StartTimeTv]    nvarchar(20) NOT NULL ,
- [Duration]       TIME NOT NULL ,
+ [DateTvID]        INT NOT NULL ,
+ [ChanelID]        INT NULL ,
+ [TimeID_start]    CHAR(6) NOT NULL ,
+ [TimeID_end]      CHAR(6) NOT NULL ,
+ [Description]     NVARCHAR(100) NOT NULL ,
+ [2ndDescription]  NVARCHAR(100) NOT NULL ,
+ [StartTimeTv]     NVARCHAR(20) NOT NULL ,
+ [TimeID_duration] CHAR(6) NOT NULL ,
 
  CONSTRAINT [PK_Emisja] PRIMARY KEY CLUSTERED ([EventID] ASC),
- CONSTRAINT [FK_116] FOREIGN KEY ([DateID])
+ CONSTRAINT [FK_116] FOREIGN KEY ([DateID_start])
   REFERENCES [dbo].[Date]([DateID]),
  CONSTRAINT [FK_128] FOREIGN KEY ([ChanelID])
   REFERENCES [dbo].[Channel]([ChanelID]),
  CONSTRAINT [FK_183] FOREIGN KEY ([DateTvID])
-  REFERENCES [dbo].[Date]([DateID])
+  REFERENCES [dbo].[Date]([DateID]),
+ CONSTRAINT [FK_202] FOREIGN KEY ([TimeID_start])
+  REFERENCES [dbo].[Time]([TimeID]),
+ CONSTRAINT [FK_206] FOREIGN KEY ([TimeID_end])
+  REFERENCES [dbo].[Time]([TimeID]),
+ CONSTRAINT [FK_210] FOREIGN KEY ([DateID_end])
+  REFERENCES [dbo].[Date]([DateID]),
+ CONSTRAINT [FK_214] FOREIGN KEY ([TimeID_duration])
+  REFERENCES [dbo].[Time]([TimeID])
 );
 GO
 
@@ -162,12 +190,20 @@ GO
 
 --SKIP Index: [fkIdx_183]
 
+--SKIP Index: [fkIdx_202]
+
+--SKIP Index: [fkIdx_206]
+
+--SKIP Index: [fkIdx_210]
+
+--SKIP Index: [fkIdx_214]
+
 
 --************************************** [dbo].[Viewership]
 
 CREATE TABLE [dbo].[Viewership]
 (
- [ViewershipID]   INT IDENTITY (1, 1) NOT NULL ,
+ [ViewershipID]  INT IDENTITY (1, 1) NOT NULL ,
  [EventID]       INT NOT NULL ,
  [TargetGroupID] INT NOT NULL ,
  [ARM]           FLOAT NOT NULL ,
@@ -427,4 +463,50 @@ WITH x AS
 )
 UPDATE x
 SET IsHoliday = 1, HolidayText = HolidayName;
+GO
+
+------------------------------------------------------------------------------------------------
+--*******************************************************TIME
+-------------------------------------------------------------------------
+CREATE TABLE #dim2
+(
+  [Time]   TIME,
+  [Hour]   TINYINT,
+  [Minute] TINYINT,
+  [Second] TINYINT,
+  [AmPm]   CHAR(2),
+  [TimeID] CHAR(6),
+);
+GO
+
+-- use the catalog views to generate as many rows as we need
+
+DECLARE @Time DATETIME
+SET @TIME = CONVERT(VARCHAR, '12:00:00 AM', 108)
+
+SELECT @TIME
+SELECT CONVERT(VARCHAR, @TIME, 108)
+TRUNCATE TABLE #dim2
+
+WHILE @TIME <= '11:59:59 PM'
+  BEGIN
+    INSERT INTO #dim2 ([TimeID], [Time], [Hour], [Minute], [Second], [AmPm])
+      SELECT
+        REPLACE(CONVERT(CHAR, @TIME, 108), ':', '') [TimeID],
+        CONVERT(TIME, @TIME, 108)                   [Time],
+        DATEPART(Hour, @Time)                       [Hour],
+        DATEPART(MINUTE, @Time)                     [Minute],
+        DATEPART(SECOND, @Time)                     [Second],
+        CASE
+        WHEN DATEPART(HOUR, @Time) >= 12
+          THEN 'PM'
+        ELSE 'AM'
+        END AS                                      [AmPm]
+    SELECT @TIME = DATEADD(second, 1, @Time)
+  END
+GO
+
+INSERT INTO Time
+  SELECT *
+  FROM #dim2
 GO
