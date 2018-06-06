@@ -9,6 +9,10 @@ GO
 DROP TABLE [dbo].[Channel];
 GO
 
+DROP TABLE [dbo].[Program];
+GO
+
+
 DROP TABLE [dbo].[Time];
 GO
 
@@ -32,6 +36,20 @@ GO
 
 DROP FUNCTION [dbo].GetEasterHolidays
 GO
+
+
+--************************************** [dbo].[Program]
+
+CREATE TABLE [dbo].[Program]
+(
+ [ProgramID]      INT IDENTITY (1, 1) NOT NULL ,
+ [Description]    NVARCHAR(100) NOT NULL ,
+ [2ndDescription] NVARCHAR(100) NOT NULL ,
+
+ CONSTRAINT [PK_Program] PRIMARY KEY CLUSTERED ([ProgramID] ASC)
+);
+GO
+
 
 --************************************** [dbo].[Time]
 
@@ -156,12 +174,11 @@ CREATE TABLE [dbo].[Event]
  [DateID_start]    INT NOT NULL ,
  [DateID_end]      INT NOT NULL ,
  [StageEventID]    INT NOT NULL ,
+ [ProgramID]       INT NOT NULL ,
  [DateTvID]        INT NOT NULL ,
  [ChanelID]        INT NULL ,
  [TimeID_start]    CHAR(6) NOT NULL ,
  [TimeID_end]      CHAR(6) NOT NULL ,
- [Description]     NVARCHAR(100) NOT NULL ,
- [2ndDescription]  NVARCHAR(100) NOT NULL ,
  [StartTimeTv]     NVARCHAR(20) NOT NULL ,
  [TimeID_duration] CHAR(6) NOT NULL ,
 
@@ -179,7 +196,9 @@ CREATE TABLE [dbo].[Event]
  CONSTRAINT [FK_210] FOREIGN KEY ([DateID_end])
   REFERENCES [dbo].[Date]([DateID]),
  CONSTRAINT [FK_214] FOREIGN KEY ([TimeID_duration])
-  REFERENCES [dbo].[Time]([TimeID])
+  REFERENCES [dbo].[Time]([TimeID]),
+ CONSTRAINT [FK_224] FOREIGN KEY ([ProgramID])
+  REFERENCES [dbo].[Program]([ProgramID])
 );
 GO
 

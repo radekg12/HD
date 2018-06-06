@@ -5,10 +5,6 @@
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=hdserwer.database.windows.net;User ID=user;Initial Catalog=hd;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-      <DTS:Password
-        DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9Enhuia8K0GqQIrOfbER2wAAAAACAAAAAAAQZgAAAAEAACAAAADSN+CCqus97fnHvqm6hCdgaqZ2w1DbnUlQlj+agwP1wgAAAAAOgAAAAAIAACAAAAByDkNbFaW5pN4U5wmMwfEp7ul5ZFqz0vitzEkDcA/54oAAAAC/52eXg3UHunYSJ7ZIw/kqrDh9We/UYgpR8pgZHljR1kImuDniIyM/+gFlEv+eXboTYuFq7fpT5q1qoCAAjSpqbG2jjJSCRbl4gHFxQtFnx2FPAYDFZToOKfr1bVaO6/bCrQlozUrrpQnmPjKhB0npIZcaHnXZk5qlbOTfreAGukAAAACOOL2I6LLW6seYTJLnsAJxDnn5vQN1L/URYKtTR4aYYw3VSPYAx2zCtGly80CJ+h/dB33hZOQFWVOhGqEMKTWx</DTS:Password>
-    </DTS:ConnectionManager>
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=hdstage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

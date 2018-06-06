@@ -58,7 +58,7 @@ CREATE TABLE hd.dbo.Event
 (
     EventID INT IDENTITY (1, 1) NOT NULL,
     Date VARCHAR(50),
-    Channel VARCHAR(50),
+    Channel VARCHAR(100),
     Description VARCHAR(100),
     [2nd Description] VARCHAR(100),
     [Start time] VARCHAR(50),
