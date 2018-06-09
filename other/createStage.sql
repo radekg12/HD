@@ -42,7 +42,7 @@ GO
 
 --************************************** [dbo].[GrupyMedioweKanalow]
 
-CREATE TABLE hd.dbo.GrupyMedioweKanalow
+CREATE TABLE dbo.GrupyMedioweKanalow
 (
     GmkID INT IDENTITY (1, 1) NOT NULL,
     F1 INT,
@@ -54,7 +54,7 @@ CREATE TABLE hd.dbo.GrupyMedioweKanalow
 
 --************************************** [dbo].[Event]
 
-CREATE TABLE hd.dbo.Event
+CREATE TABLE dbo.Event
 (
     EventID INT IDENTITY (1, 1) NOT NULL,
     Date VARCHAR(50),
